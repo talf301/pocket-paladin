@@ -132,6 +132,7 @@ export class Game {
       { id: 'start:0', hex: K(0, 4), label: 'West' }, { id: 'start:2', hex: K(2, 4), label: 'Middle' }, { id: 'start:4', hex: K(4, 4), label: 'East' },
     ], { ctx: 'start' });
     this.pos = { x: +start.id.split(':')[1], r: 4 };
+    this.reveal();
 
     // Level 1 benefits and the profession.
     const gains = this.lv.gain; const prof = c.profession ? PROFESSIONS[c.profession] : null;

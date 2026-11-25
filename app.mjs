@@ -457,10 +457,11 @@ if (q.has('cfg')) { // development: ?cfg={...}&seed=1&auto=20&panel=company star
     if (panel) state.panel = panel;
     if (fixed.length && state.session.prompt) { answer(fixed.shift()); return setTimeout(step, 0); }
     const stop = q.get('until'); const hit = stop && state.prompt && (stop === 'combat' ? !!state.game.cmb && state.game.cmb.phase === (q.get('phase') || 'block') : state.prompt.ctx === stop);
+    if (q.get('open') && !(n < auto && state.session.prompt && !hit)) { if (q.get('open') === 'hero') return heroSheet(); if (q.get('open') === 'ref') return referenceSheet(); }
     if (n++ < auto && state.session.prompt && !hit) { answer(randomAnswer(state.session.prompt, rnd)); setTimeout(step, 0); } else render();
   };
   setTimeout(step, 0);
-} else render();
+} else { if (q.get('screen')) state.screen = q.get('screen'); render(); }
 if ('serviceWorker' in navigator && location.protocol === 'https:') {
   navigator.serviceWorker.register('sw.js').then(() => navigator.serviceWorker.ready).then((reg) => {
     const art = [
