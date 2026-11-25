@@ -254,9 +254,8 @@ export class Game {
   moveCost(hex) {
     if (hex.quest) return QUESTS[hex.quest.q][hex.quest.side].move;
     const t = hex.terrain;
-    if (t === 'lake') return this.hasSkill('lake') ? 2 : Infinity;
-    if (t === 'mountain') return this.hasSkill('mountain') ? 2 : Infinity;
-    let cost = TERRAIN_COST[t];
+    if ((t === 'lake' || t === 'mountain') && !this.hasSkill(t)) return Infinity;
+    let cost = t === 'lake' || t === 'mountain' ? 2 : TERRAIN_COST[t];
     if (t === 'hills' && this.isTower(hex)) cost = 4;
     if (this.wayfarer && this.wayfarer.mode === 'cost' && this.wayfarer.terrain === t) cost = Math.max(0, cost - 1);
     return cost;
@@ -286,7 +285,7 @@ export class Game {
   }
   resetTurn() {
     this.used = 0; this.extra = 0; this.precision = false; this.meleeRanged = false; this.feints = 0; this.brutes = [];
-    this.wayfarer = null; this.clearPool();
+    this.wayfarer = null; this.clearPool(); this.ignores = new Map();
     for (const s of this.skills || []) s.used = false;
   }
 
@@ -317,7 +316,8 @@ export class Game {
   async exhaust(obj) {
     obj.exhausted = true;
     // Courage: "3 exhausted: -1 heart".
-    if (this.lum.perk === 'exhaust3' && [...this.allies, ...this.skills].filter((x) => x.exhausted).length === 3 && this.wounds > 0) {
+    if (this.lum.perk === 'exhaust3' && [...this.allies, ...this.skills].filter((x) => x.exhausted).length === 3 && !this.perkUsed) {
+      this.perkUsed = true; if (this.wounds <= 0) return;
       this.wounds--; this.log('Courage: with 3 exhausted, you heal 1 wound.', 'good');
     }
   }
@@ -484,7 +484,7 @@ export class Game {
     return true;
   }
   async gainSkill(title = 'Choose a skill') {
-    this.fillOffer();
+    if (!this.offer.length) this.fillOffer();
     if (!this.offer.length) { this.log('No skill tokens remain.'); return; }
     const pick = await this.choose(title, this.offer.map((id, i) => ({ id: `offer:${i}`, offer: i, label: SKILLS[TOKENS[id].skill].name, text: SKILLS[TOKENS[id].skill].text })), { ctx: 'skill' });
     const id = this.offer.splice(+pick.id.split(':')[1], 1)[0];
@@ -537,7 +537,8 @@ export class Game {
       const extra = here.site === 'caravan' ? 1 : 0;
       this.offer.forEach((id, i) => { const cost = TOKENS[id].cost + extra; if (cost <= this.pool.inf && this.capacity > 0) o.push({ id: `recruit:${i}`, offer: i, label: `Recruit ${ENEMY_NAME[id]} (${cost} influence)` }); });
       if (!here.mark && here.site === 'town' && this.pool.inf >= 2) {
-        if (this.canHeal(1)) o.push({ id: 'buyheal', label: 'Buy 1 healing (2 influence)' });
+        if (this.wounds > 0 || this.injured) o.push({ id: 'buyheal', label: 'Buy 1 healing (2 influence)' });
+        this.allies.forEach((a, i) => { const cost = 2 * this.healCost(a); if (a.wounded && cost <= this.pool.inf) o.push({ id: `buyally:${i}`, label: `Heal ${this.allyName(a)} (${cost} influence)` }); });
         if (ELEMENTS.some((e) => this.shards[e] < 5)) o.push({ id: 'buyshard', label: 'Buy a shard (2 influence)' });
       }
       if (!here.mark && here.site === 'caravan' && (here.bought || 0) < 3 && this.xp.length && ELEMENTS.some((e) => this.shards[e] < 5)) o.push({ id: 'cvshard', label: 'Trade XP for shards' });
@@ -564,7 +565,14 @@ export class Game {
         return this.combat(foes);
       }
       case 'recruit': return this.recruit(+arg, here);
-      case 'buyheal': this.pool.inf -= 2; this.usedSites.add(here.k); this.log('You buy healing in town.'); return this.heal(1);
+      case 'buyheal': {
+        let what = this.wounds > 0 ? 'wound' : 'injury';
+        if (this.wounds > 0 && this.injured) { const p = await this.choose('Buy healing', [{ id: 'wound', label: 'Remove a wound' }, { id: 'injury', label: 'Remove your injury' }, { id: 'cancel', label: 'Cancel' }], { ctx: 'heal' }); if (p.id === 'cancel') return; what = p.id; }
+        this.pool.inf -= 2; this.usedSites.add(here.k);
+        if (what === 'wound') { this.wounds--; this.log('You buy healing in town: 1 wound healed.', 'good'); } else { this.injured = false; this.log('You buy healing in town: your injury is healed.', 'good'); }
+        return;
+      }
+      case 'buyally': { const a = this.allies[+arg]; this.pool.inf -= 2 * this.healCost(a); a.wounded = false; this.usedSites.add(here.k); this.log(`${this.allyName(a)} is healed in town.`, 'good'); return; }
       case 'buyshard': this.pool.inf -= 2; this.usedSites.add(here.k); return this.gainAnyShard('Buy which shard?');
       case 'cvshard': return this.caravanTrade(here);
       case 'level': return this.levelUp();
@@ -587,8 +595,7 @@ export class Game {
     if (foes.length) await this.combat(foes);
   }
   async completeQuest(hex) {
-    const q = QUESTS[hex.quest.q][hex.quest.side]; const [need, n] = q.need;
-    let left = n; for (const t of NEED_TYPES[need]) { const use = Math.min(left, this.pool[t]); left -= use; }
+    const q = QUESTS[hex.quest.q][hex.quest.side];
     this.clearPool();
     this.rep.push(hex.quest); hex.quest = null; this.bribed = false;
     this.log(`Side quest complete: +${q.rep} reputation.`, 'good');
@@ -619,8 +626,8 @@ export class Game {
     if (pick.id === 'cancel') return;
     const [x] = this.xp.splice(+pick.id.split(':')[1], 1); this.returnToken(x.id);
     const n = Math.min(this.xpValue(x), 3 - (hex.bought || 0));
-    hex.bought = (hex.bought || 0) + n; this.usedSites.add(hex.k);
-    for (let i = 0; i < n && ELEMENTS.some((e) => this.shards[e] < 5); i++) await this.gainAnyShard(`Caravan: shard ${i + 1} of ${n}`);
+    this.usedSites.add(hex.k);
+    for (let i = 0; i < n && ELEMENTS.some((e) => this.shards[e] < 5); i++) { await this.gainAnyShard(`Caravan: shard ${i + 1} of ${n}`); hex.bought = (hex.bought || 0) + 1; }
   }
   async levelUp() {
     const cost = this.nextCost(); const sel = new Set();
@@ -671,6 +678,7 @@ export class Game {
     this.rollSource();
     this.refreshOffer();
     for (const x of [...this.allies, ...this.skills]) x.exhausted = false;
+    this.perkUsed = false;
     this.log(`Round ${this.round} begins. Allies and skills are refreshed.`, 'big');
   }
 
@@ -678,7 +686,10 @@ export class Game {
   async combat(foes) {
     this.clearPool();
     const c = this.cmb = {
-      E: foes.map((foe) => ({ foe, hpBonus: 0, mender: false, ignored: new Set(), bruted: new Set(), fortIgnore: 0, blocked: false, intimidated: false, out: false })),
+      E: foes.map((foe) => {
+        if (!this.ignores.has(foe)) this.ignores.set(foe, { ignored: new Set(), bruted: new Set() }); // Feint and Brute Force last the turn
+        return { foe, hpBonus: 0, mender: false, ...this.ignores.get(foe), fortIgnore: 0, blocked: false, intimidated: false, out: false };
+      }),
       phase: 'ranged', fresh: true, woundsTaken: false, pending: [],
     };
     c.hidden = c.E.some((e) => this.stats(e.foe).abil.has('hidden'));
@@ -742,6 +753,7 @@ export class Game {
       if (p.id === 'cancel') return true;
       const [ei, ab] = p.id.split(':'); c.E[+ei].ignored.add(ab); this.feints--;
       if (ab === 'hidden') c.hidden = false;
+      if (ab === 'commander') for (const a of c.pending) if (a.e === c.E[+ei] && !a.done) delete a.sub;
       this.log(`Feint: ${p.label} is ignored.`);
       return true;
     }
@@ -797,6 +809,7 @@ export class Game {
           const saved = { phase: c.phase, pending: c.pending };
           c.phase = 'block'; c.pending = [{ fixed: { name: `${st.name}'s vengeance`, atk: 2 * others, type: st.type, abil: new Set() } }];
           await this.blockLoop();
+          this.extraWounds();
           c.phase = saved.phase; c.pending = saved.pending;
         }
         continue;
@@ -825,12 +838,15 @@ export class Game {
       return a;
     });
     await this.blockLoop();
-    // Wounds past your turn marker cost extra, once, after all attacks.
-    if (c.woundsTaken && this.woundPos > 0) {
-      const col = 7 - Math.ceil(this.woundPos / 2);
-      if (col < this.turn) this.wound(this.turn - col, 'your wounds passed your turn marker');
-    }
+    this.extraWounds();
     c.pending = [];
+  }
+  /** Wounds past your turn marker cost extra, once, after all the attacks of a block phase. */
+  extraWounds() {
+    const c = this.cmb; if (!c.woundsTaken) return;
+    c.woundsTaken = false;
+    const col = 7 - Math.ceil(this.woundPos / 2);
+    if (this.woundPos > 0 && col < this.turn) this.wound(this.turn - col, 'your wounds passed your turn marker');
   }
   async blockLoop() {
     const c = this.cmb;
