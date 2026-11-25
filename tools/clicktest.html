@@ -1,0 +1,25 @@
+<!doctype html>
+<!-- Dev helper: clicks a sequence of selectors in the app and prints what happened.
+     tools/clicktest.html?cfg=...&seed=1&clicks=SEL1|SEL2  (use with chrome --headless --dump-dom) -->
+<meta charset="utf-8">
+<style>html, body { margin: 0; } iframe { border: 0; width: 390px; height: 844px; display: block; }</style>
+<iframe id="f"></iframe><pre id="out"></pre>
+<script>
+const q = new URLSearchParams(location.search); const clicks = (q.get('clicks') || '').split('|').filter(Boolean); q.delete('clicks');
+const f = document.getElementById('f'); f.src = '../public/index.html?' + q.toString();
+const out = document.getElementById('out'); const log = (s) => { out.textContent += s + '\n'; };
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+f.onload = async () => {
+  await sleep(600); const d = f.contentDocument;
+  d.defaultView.addEventListener('error', (e) => log('ERROR ' + e.message));
+  const title = () => (d.querySelector('.sheet:not(.hidden) h3, .sheet:not(.hidden) h2') || d.querySelector('.ptitle b') || {}).textContent;
+  log('start: ' + title());
+  for (const sel of clicks) {
+    const el = d.querySelector(sel);
+    if (!el) { log(`MISSING ${sel}`); continue; }
+    el.dispatchEvent(new d.defaultView.MouseEvent('click', { bubbles: true })); await sleep(80);
+    log(`${sel} -> ${title()} | pool: ${d.querySelector('.pool') ? d.querySelector('.pool').textContent.trim() : ''}`);
+  }
+  log('done');
+};
+</script>
