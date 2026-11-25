@@ -231,3 +231,23 @@ test('save and undo: a game replays exactly from its answers', async () => {
   assert.equal(snap(again.game), snap(r.game));
   if (again.canUndo()) { const n = again.answers.length; again.undo(); await new Promise((res) => setTimeout(res, 5)); assert.equal(again.answers.length, n - 1); assert.ok(again.prompt); }
 });
+
+test('town: healing an ally costs 2 influence per healing point, half its HP rounded down', async () => {
+  const { g } = await mk(); pull(g, 'T1');
+  const town = [...g.hexes.values()].find((h) => h.site === 'town') || (() => { const h = { k: '9,9', x: 9, r: 9, tile: 0, terrain: 'grass', site: 'town', enemy: null, quest: null, mark: null }; g.hexes.set(h.k, h); return h; })();
+  g.pos = { x: town.x, r: town.r }; g.allies.push({ id: 'T1', exhausted: false, wounded: true }); // HP 6: 3 healing, 6 influence
+  g.pool.inf = 5; assert.ok(!g.turnOptions().some((o) => o.id === 'buyally:0'));
+  g.pool.inf = 6; const o = g.turnOptions().find((x) => x.id === 'buyally:0'); assert.ok(o);
+  await g.doTurnOption(o); assert.equal(g.allies[0].wounded, false); assert.equal(g.pool.inf, 0);
+  await g.endTurn(); assert.equal(town.mark, 'black');
+});
+
+test('feint lasts the turn; wayfarer lowers lake cost for a lakewalker', async () => {
+  const { g, script } = await mk(); pull(g, 'T4'); const f = foe('T4');
+  g.feints = 1;
+  script.push('feint', (p) => p.options.find((o) => /Trap/.test(o.label)).id, 'next', 'hit:0', 'next');
+  await g.combat([f]); assert.equal(g.turn, 1, 'trap was ignored');
+  script.push('next', 'hit:0', 'next'); await g.combat([f]); assert.equal(g.turn, 1, 'still ignored in a second combat this turn');
+  g.skills.push({ skill: 'lake', id: 'T1' }); g.wayfarer = { terrain: 'lake', mode: 'cost' };
+  assert.equal(g.moveCost({ terrain: 'lake', site: null, quest: null }), 1);
+});

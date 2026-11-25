@@ -66,6 +66,10 @@ Rule sources in order of authority: the reference cards and printed components, 
 - **Scorchwright.** In the melee phase, if you blocked the enemy and your attack is at least half its HP, you may mark it. It leaves the fight and is defeated (with XP) at the end of your next turn.
 - **Storm XP** is spent straight into a level up on the turn you move in; the storm is then marked.
 - **Caravan.** Discard one XP token for one shard per XP on it, 3 shards at most per caravan.
+- **Healing.** An ally costs half its HP (rounded down, at least 1) in healing points, paid at once. In a town that is 2 influence per point. A wounded ally cannot be used or absorb damage.
+- **Feint and Brute Force** last for the turn on the enemy you choose, across combats.
+- **Winning.** The game is won as soon as the city is cleared and every goal is met; if a goal is still open you play on. "Turns remaining" counts the rest of this round and the later rounds at your current wound-limited turn count.
+- **The offer** is refilled at the end of your turn, not before you choose a skill.
 - **Enemy names.** The tokens have none; the names in the app are labels for the art.
 
 ## Publishing
