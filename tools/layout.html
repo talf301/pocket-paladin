@@ -1,0 +1,12 @@
+<!doctype html>
+<!-- Dev helper: prints the layout boxes of the app's main regions (use with chrome --headless --dump-dom). -->
+<meta charset="utf-8">
+<style>html, body { margin: 0; } iframe { border: 0; width: 390px; height: 844px; display: block; }</style>
+<iframe id="f"></iframe><pre id="out"></pre>
+<script>
+const f = document.getElementById('f'); f.src = '../public/index.html' + location.search;
+setTimeout(() => {
+  const d = f.contentDocument; const sel = (new URLSearchParams(location.search).get('sel') || '.game,.top,.stage,.hud,.party,.panel,.pbody,.prompt').split(',');
+  document.getElementById('out').textContent = sel.map((s) => { const e = d.querySelector(s); if (!e) return s + ': none'; const r = e.getBoundingClientRect(); return `${s}: y=${Math.round(r.top)} h=${Math.round(r.height)} x=${Math.round(r.left)} w=${Math.round(r.width)}`; }).join('\n');
+}, 2500);
+</script>

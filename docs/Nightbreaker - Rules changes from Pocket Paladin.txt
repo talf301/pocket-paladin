@@ -1,0 +1,113 @@
+Nightbreaker - Rules changes from Pocket Paladin 
+Use Pocket Paladin rulebook with the adjustments in this document :) 
+
+
+Rebalanced / Adjusted
+	•	Storms no longer have the “n-1” clause. Trust the reference card.
+	•	Many enemies and skills have seen changes. Trust the reference cards. 
+	•	Trust printed values on tracks mats and ability mats. Note that Courage roughly corresponds to previous Red Paladin, and Temperance roughly corresponds to previous Purple Paladin. 
+	•	New icons/abilities on some luminary mats. Check reference cards. 
+	•	Crystals are now Element Shards. These work the same but have the earth, wind and fire images instead of previous ones. 
+
+Side Quests
+	•	Are the new hexagonal tokens with location art on them.
+	•	When you reveal a map tile, populate a side quest on spaces with the compass rose icon. 
+	•	Use the side with the white signpost icon (bottom of token) on easy/green map tiles, and the yellow signpost icon for hard/brown map tiles. 
+	•	To move into a side quest’s hex, you must pay its move cost (top left). Ignore the underlying terrain. 
+	•	Before you can leave a side quest’s hex, you must either complete it or bribe your way out of it. To complete it, pay the noted points on the top right. To bribe your way out of it, pay crystals equal to its crystals reward (bottom right). For each crystal you can’t pay, take 1 wound. 
+	•	In other words, probably don’t move into a side quest’s hex if you can’t complete it.
+	•	When you complete a side quest, place its token on your luminary mat, on the art. 
+	•	Immediately gain the crystal reward (bottom right of token)
+	•	You also now have that much Reputation (the star value). 
+	•	Reputation
+	•	Unspent Reputation increases your score at the end of the game. 
+	•	Intimidate actions: In a combat, you may spend Reputation (discard the side quest token(s) ) equal to an enemy’s XP reward value to Intimidate the enemy. Intimidated enemies do not attack you this round. 
+
+Rule Changes / Clarifications
+	•	Cubes
+	•	Use cubes to track all the things on your tracks. They can be whatever color.
+	•	I recommend using a black cube for your wound track, and swapping in a red cube if you have an injury. 
+	•	Note you’ll want a few extra cubes for marking sites (see below). 
+	•	Map Tiles (Setup)
+	•	You will have 3 green-backed tiles and 3 brown-backed tiles in the game. 
+	•	Select 3 random brown tiles. 1 of the tiles must be a castle tile and the other must be a non-castle tile. 
+	•	Select 3 random green tiles. 
+	•	Stack them face down: 
+	•	Shuffle the brown city tile with a brown non-city tile face down (so you don’t know whether the city tile is bottom or second from the bottom).
+	•	Place the remaining brown tile on top of the first 2.
+	•	Shuffle the 3 green tiles and stack them on top of the brown tiles. 
+	•	As part of setup, take the top map tile from the stack and place it near you for the first map tile. Place your meeple in an invisible hex in what would be the hex row just south of the southernmost row of hexes on the tile. You may choose the left, middle, or right invisible hex.
+	•	Map Tiles (Placement Rules)
+	•	There are only 3 possible places you can place a newly revealed map tile in relation to the tile your meeple is on: left, right, or north of the existing tile. 
+	•	North: Place the new tile adjacent to the northernmost hexes of the existing map tile. 
+	•	Left/Right: Place the new tile adjacent left or adjacent right, respectively, of the existing map tile. It is offset 1 hex row northward of the existing map tile. 
+	•	When your meeple is adjacent to a hex that would be on a newly-revealed tile if placed, you can explore by spending 2 Move Points and reveal the top tile of the map tile stack and place it there. 
+	•	There are only a couple of spots your meeple could be on that would allow you to potentially explore 2 new map tiles without moving to a new hex first. 
+	•	There are no other restrictions on map tile placement as long as you follow the above placement rules and there is not already a map tile in that spot. 
+	•	You could go in a straight line northward if you wanted, explore mostly rightward or leftward, or a mix. 
+	•	Marking Sites
+	•	As you interact with some sites, you’ll mark them with cubes.
+	•	When you defeat a tower enemy, place a red cube on that hex. Defeated towers give you points at game end (if you win). 
+	•	At the end of a turn in which you bought crystals or healed at a town or caravan, mark it with a black cube. It is now exhausted. You cannot buy crystals or heal at this site for the rest of the game, although you may still recruit allies here.
+	•	When you gain XP from a storm, mark it with a black cube. For the rest of the game, you cannot gain XP from that storm (though you still must Navigate the storm again if you happen to leave and then come back into that hex). 
+	•	Wandering enemies
+	•	You may attack wandering enemies when in an adjacent hex. You don’t need to move into their hex, but you can if you want to. 
+	•	If you move from a hex adjacent to a wandering enemy to a different hex adjacent to that enemy, you provoke it. This means you must immediately enter combat with it. 
+	•	Note that now it is possible to be in combat with 2 wandering enemies at once. Handle this like normal multi-enemy combat (described in the Castle Combat section of the rulebook). 
+	•	Dusk vs. Doom enemies
+	•	Dusk enemies are what were previously called wandering enemies. It just means use printed attack and HP values, and the lower XP reward (upright).
+	•	Doom enemies are what are found in towers and typically the Castle. Use the same tokens as Dusk enemies, except Doom enemies have double their printed Attack and HP stats. Also, when you defeat a Doom enemy, gain its higher XP reward (upside down). 
+	•	Note that Doom enemies are not fortified by default anymore. But per new tower terrain rules (see section below), some tower terrains fortify the enemy. 
+	•	All enemies at the castle are by default fortified.
+	•	Shades
+	•	Select a Shade (has the purple Shade icon in lower right of token) during setup. 
+	•	Shades have an easy and hard side, noted by their strength value (purple number beside Shade icon). Choose which one you want. 
+	•	Your Shade is one of the enemies revealed for the castle combat. 
+	•	Thus on Normal difficulty, you fill face the Shade and 2 Doom enemies at the castle. 
+	•	Use printed Shade stats, but remember that for Doom enemies you must double their Attack and HP (and get their higher XP rewards when defeated). 
+	•	No Retreating
+	•	You no longer retreat if you do not defeat all enemies in a combat. This applies to all combat sites: castle, towers, wandering enemies. 
+	•	No Days/Nights
+	•	There are now just rounds, not day rounds or night rounds. 
+	•	Normal games are still a 4-round limit. 
+	•	Hills, forests and desert hexes all have a 3 move cost, but there are now new tower terrain rules that make these unique from each other (see next bullet).
+	•	Tower Terrain Rules
+	•	If a hills, forest or desert hex has a tower present, that hex and tower combat have special rules based on which terrain it is. See reference card for these rules. 
+	•	Game Difficulty Ratings
+	•	No matter your difficulty setting, you will always have a 4-round limit and face 1 shade in your castle combat. Remember that by default all castle enemies are fortified. 
+	•	Your game’s difficulty rating is the sum of your Shade’s strength value (purple number in lower right of their token), your castle’s strength (described below), and your goal strength (described below). 
+	•	Castle strengths are:
+	•	2 Doom enemies (plus a Shade): 3 Strength
+	•	2 Dusk enemies (plus a Shade): 0 Strength
+	•	3 Doom enemies (plus a Shade): 6 Strength
+	•	Your goal strength is determined by how many EXTRA goal tokens you have in play. If you are playing with a profession, you include 1 goal token by default. Any goal tokens in addition to this are considered extra. Any goal tokens present at all if you aren’t playing with a profession are considered extra. 
+	•	1 extra goal token: 4 Strength
+	•	2 extra goal tokens: 9 Strength
+	•	Your game’s difficulty rating corresponds to an Easy, Medium or Hard rating based on your game’s total rating. For example, 
+	•	Easy: Total rating of 1-4
+	•	Normal: Total rating of 5-7
+	•	Hard: Total rating of 8-11
+	•	Expert: 12+
+	•	For example, if I select a 3-Strength castle (2 Doom enemies) and the hard version of Pride as my Shade (4 Strength), that’s a 3 + 4 = 7 total difficulty rating, which puts my game on the upper end of a Normal difficulty game. 
+	•	Scoring
+	•	If you win the game, you can calculate your score for a more precise measure of how well you did. 
+	•	Add points equal to…
+	•	Twice the number of turns remaining
+	•	Unspent reputation
+	•	Number of towers defeated (marked towers)
+	•	Game difficulty rating
+	•	Shade strength
+	•	City Strength
+	•	Goal strength
+	•	Then subtract points equal to:
+	•	Marked towns and caravans
+	•	Every 2 wounds on your luminary
+	•	Every 1 wounded ally
+	•	Epic Mode (optional - UNTESTED)
+	•	6-round limit instead of 4-round limit. 
+	•	Add an additional brown map tile (the other castle tile) and shuffle along with the other brown tiles during setup. You should have 3 green tiles and 3 brown tiles in total. 
+	•	The first castle you reveal play as normal per your desired castle and Shade strength settings.
+	•	The second castle you reveal:
+	•	The castle should be a setting harder than the first castle. 
+	•	If your first castle was already on Hard, in the second castle face 3 Doom enemies and 1 Dusk enemy, plus the Shade. 
+	•	The shade you choose for this castle must be at least 2 strength higher than the first Shade’s strength. 

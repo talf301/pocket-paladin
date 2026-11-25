@@ -1,0 +1,127 @@
+Pocket Paladin changes for version 1.2 (from version 1.1)
+
+	•	Added profession tokens
+	•	You may optionally play with a profession. 
+	•	If you don’t, play as normal with no profession token.
+	•	If you do…
+	•	Select 1 profession token. If your Luminary begins with an ally slot at setup, gain the profession token as an ally immediately at setup (you don’t have to recruit it). If your Luminary begins with a skill at setup, begin the game with this profession’s skill. 
+	•	Then, you must select one of the remaining profession tokens at random to be your goal token. Flip it to its text side and leave it nearby for reference. You must fulfill the conditions of your goal to win (in addition to defeating the Shade encounter). 
+	•	Profession Skill reference:
+	•	Mender: When you begin a combat, exhaust this skill to heal 2 and reduce 1 enemy’s printed HP by 1.
+	•	Scorchwright: Exhaust this skill during a combat, but only if you have successfully blocked the target enemy and have dealt the enemy at least half the required wounds to defeat it (rounded up). Mark the enemy with a red cube. At the end of your next turn, defeat that enemy. In the meantime, for all other purposes, it is considered out of play. 
+	•	Wayfarer: Exhaust this skill and declare a terrain type. The move cost of all hexes of this terrain type is reduced by 1 this turn. 
+	•	Hunter: Passive effect: All abilities that generate ranged attack generate +1 ranged attack. You may exhaust this skill to ignore 1 enemy’s fortification (you don’t get the ranged attack buff effect). 
+	•	Darkwatcher: Exhaust this skill to swap an enemy on your hex (or a hex adjacent to you) with an enemy token currently saved as XP. The swapped tokens must be the same level (Dusk vs. Doom).
+	•	Increased XP costs of later level ups, for all Luminaries.
+	•	Second white level: +1 to version 1.1’s XP cost
+	•	First green level: +2
+	•	Second green level: +3
+	•	Third green level: +4
+	•	Fourth green level: +5
+	•	Envy’s Hidden (leaf) ability works like this:
+	•	When you reveal city enemies, Envy goes in the leftmost position. When you enter combat with Envy, draw a random level 1 side quest and attach it to her. An enemy with an attached side quest is hidden. Hidden enemies can attack you as normal, but you cannot attack them until you have found them, which means you’ve paid move points equal to the side quest’s move cost. If you defeat a hidden enemy, immediately transfer the side quest to the next enemy to the right (if no other enemies remain, discard the side quest instead). An enemy remains hidden until you defeat them. If you did not defeat a hidden enemy this turn, at the end of the turn, the next enemy to the right of the rightmost hidden enemy also becomes hidden (wrap around if needed). Draw it a level 1 side quest. If all enemies are already hidden, instead flip the leftmost level 1 side quest to its level 2 side. If all side quests are at level 2, do nothing instead. If you defeat a hidden enemy and the next enemy to the right already has a side quest, skip enemies until you find one that does not have a side quest. If all have side quests, discard the side quest instead and flip the leftmost level 1 side quest to its level 2 side. 
+
+
+Rules Updates
+
+Since version 1.1
+	•	If you ever gain XP from a Storm, mark it with a cube. The storm still exists going forward, and you must navigate it before leaving that space if you leave and come back, but you can no longer gain XP from it.
+	•	Exhaustion Cubes vs. Achievement Cubes
+	•	Exhaustion Cubes are black. You mark with exhaustion cubes when you heal at a town or caravan, or earn XP from a storm. 
+	•	Achievement Cubes are red. You mark towers with achievement cubes when you defeat them. 
+	•	If you've already purchased crystals at a town on a turn, you can't again unless you leave and come back. Mark it with an achievement cube if necessary to remember this.
+
+Recap of Original Rule Changes from Pocket Paladin
+	•	Storms are not n-1
+	•	Do not retreat if you do not defeat an enemy, even in a castle. 
+	•	If you leave a side quest tile without completing its second cost, you must pay its shard rewards.
+	•	Crystals are now called element shards. 
+	•	Wandering enemies per MK rules, except you are allowed to move into their space too
+	•	No day/night mechanics
+	•	See special rules for tower enemies in hills, forests and deserts. 
+	•	The harder enemies with double the attack and HP stats, and the higher XP reward, are called Doom enemies. They are not fortified by default.
+	•	Castle enemies ARE fortified by default. 
+	•	Side quests reward reputation in addition to shards.
+	•	Can spend reputation equal to an enemy’s lower XP reward to Intimidate the enemy. It does not attack this combat. 
+	•	Mark (put red cube on) towns and caravans after you heal there. From now on, healing costs twice as much there. 
+	•	Clarification: The rule that you take extra wounds per turn space you are past your current turn space–this applies ONCE after the ENTIRE defend phase, not for every single enemy. Thus in combat with multiple enemies, take all the damage you need to take and then, only once, apply this extra wound penalty based on wound/turn cube locations.
+	•	Map tiles
+	•	For normal game, choose 1 random castle tile and 1 random non-castle hard tile. Shuffle these so you don’t know which is on top. Then select 3 random easy tiles and put them on top of the 2 hard tiles. 
+	•	Timer
+	•	Default game is a 4-round limit. 
+	•	The Epic game is a 6-round limit, but you must defeat both castles. 
+	•	Difficulty (always there is a Shade in addition to enemies mentioned)
+	•	Reminder: Do not double the Shade’s stats like you would a Doom enemy! Use their printed stats. 
+	•	Easy setting: 2 Dusk enemies at the castle. Worth zero points during scoring.
+	•	Normal setting: 2 Doom enemies. Worth 3 points during scoring
+	•	Hard setting: 2 Doom enemies and draw +1 Goal during setup. Worth 6 points during scoring
+	•	Impossible setting: 3 Doom enemies and draw +1 Goal during setup. Worth 10 points during scoring
+	•	Epic Mode
+	•	6-round limit
+	•	Include both castle tiles in setup, along with the random 1 non-castle hard tile and 3 easy tiles (6 tiles total).
+	•	First castle is your normal difficulty setting. Second castle is one higher difficulty setting. If you played on Impossible setting, make it 4 Doom enemies at the second castle. 
+	•	To calculate your score if you win:
+	•	Add points equal to…
+	•	Twice the number of turns remaining
+	•	Unspent reputation
+	•	Number of towers defeated (mark towers when defeated)
+	•	Game difficulty
+	•	Then subtract points equal to:
+	•	Marked towns and caravans
+	•	Every 2 wounds
+
+
+
+Pocket Paladin changes for version 1.3 (from version 1.2)
+
+Component Changes
+	•	Tracks Mats
+	•	Removed Epic Mode (removed rounds 5 and 6 on luminary mats)
+	•	Increased costs to upgrade into green levels and beyond, by roughly 2 XP per level.
+	•	Corrected Courage XP leveling cost misprint in a later green level
+	•	Profession Tokens
+	•	Profession allies made weaker in their abilities
+	•	Profession goals made slightly harder
+	•	Side quests
+	•	Made some of them slightly harder for the crystal reward value. 
+	•	Added 2 new side quest tokens.
+	•	Enemies 
+	•	T12 (blue hound) - Increased HP to 3 and reduced attack to 3.
+	•	T13 (necro-mage skeleton) - Increased HP to 3
+	•	Reference cards
+	•	Adjusted Envy’s hidden skill to: All enemies in this combat (even after this enemy is defeated) have this effect: If you do not successfully block this enemy’s attack, it gains +1 HP for this combat. 
+	•	Adjusted Darkwatcher’s skill to: When entering a combat, you may swap a dusk enemy saved as XP for a dusk enemy in the combat, or swap a doom enemy saved as XP for a doom enemy in the combat.
+	•	Fixed errors on some of the rest of the cards. Outdated terminology. Nothing gameplay related.
+
+
+
+
+Recap of Setting Name Front Runners
+
+	•	This game’s name
+	•	Nightbreaker
+	•	Dawnbringer
+	•	Dawnfall
+	•	The World / Plain of Existence
+	•	Othera
+	•	Elyndra
+	•	Eloria
+	•	Aloria
+	•	Continents
+	•	Althene - “the first home”
+	•	Caelen - “the green land”
+	•	Meren - “between the rivers”
+	•	Valen  - “the open country”
+	•	Rovendar - “life is movement”
+	•	Kingdoms
+	•	Dawnreach
+	•	Condale
+	•	Everdawn
+	•	Valmere
+	•	Cities
+	•	Farhome
+	•	Sol
+	•	Northwood City
+	•	Nul Gador
+	•	Molta
+

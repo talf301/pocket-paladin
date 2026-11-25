@@ -1,0 +1,1571 @@
+roa
+
+
+
+
+      1
+Prologue
+Epic adventure awaits in this micro solo game! Choose your hero and scenario and
+set forth to conquer the enemy’s castle. Cross the landscape, learn new skills, gain
+allies, and interact with map sites like monsters, mages, storms, towns, and tunnels.
+Reach and defeat the enemy’s castle in time and you have saved Lorehelm from the
+encroaching evil…for now.
+
+Cutting the Cover Mat
+The cover mat is oversized due to
+component restrictions on The Game
+Crafter. You need to cut it along the dotted
+line provided.
+
+Table of Contents
+Components………………………………………………………………………3
+Single-Sleeve Storage…………………………………………………………….4
+Gameplay Overview………………………………………………………….….5
+     Difficulty Settings……………………………………………………….…...5
+Setup………………………………………………………………………………6
+How to Win…………………………………………………………………….....8
+Important Concepts……………………………………………………………...9
+     Rounds, Turns, Actions, Abilities & Points……………………………….....9
+     Crystals and the Source……………………..……………………………..9
+Rounds…………………………………………………………………………...11
+     Turns Stage……………………………………………………………….....11
+          Action Phase…………………………………………………………...11
+             GENERATING AND SPENDING POINTS…………………………....12
+                 Abilities………………………………………………………..13
+                 Allies…………………………………………………………...17
+                  Skills…………………………………………………………...18
+             TAKING ACTIONS…………………………………………………..19
+                  Move…………………………………………………………...19
+                     Exploring…………………………………………………...19
+                     Terrain Types………………………………………………..20
+                  Interact with a Site……………………………………………..21
+                  Combat………………………………………………………...24
+                     Combat Phases……………………………………………..26
+                        Taking Wounds…………………………………………..27
+                        Healing…………………………………………………....28
+                  Level Up………………………………………………………..29
+                 Advance…………………………………………………….…..31
+          Turn Cleanup Phase…………………………………………………....31
+      Round Cleanup Stage……………………………………………………...31
+      Castle Combat (Multiple Enemies)………………………………………..33
+Optional Bonus Map Variant…………………………………………………...35
+Enemy Abilities……………………………………………………………….…..38
+Skills……………………………………………………………………………....39
+2
+Components
+
+
+
+
+             3
+Single-Sleeve Storage
+Pocket Paladin does not come with a box or a physical rulebook. This is in
+part to save the customer money (boxes and rulebooks are expensive
+components!). But it’s also because I had a unique vision for this game: I
+wanted you to be able to carry it in your wallet. All essential components
+for Pocket Paladin will fit into a single card sleeve, with the optional
+reference cards in a second sleeve. A firm sleeve may not work for this. I
+recommend using a soft (and typically cheaper) sleeve, such as Ultra Pro
+penny sleeves. To store the game:
+
+1.   Lay the cards on the table. Put a single layer of tokens and shards on
+     top of 2 of the cards.
+2.   Place the remaining 2 cards on top of those cards.
+3.   Stack one of those piles on top of the other to make a single stack.
+4.   Carefully slide the entire stack into a soft card sleeve.
+5.   Slide the cover mat into the sleeve, its two short edges around the
+     outside cards. This prevents the tokens and shards from falling out.
+6.   Slide the reference cards into a separate card sleeve.
+
+
+
+
+4
+Gameplay Overview
+Pocket Paladin is played in turns and rounds. A round consists of up to 6
+turns, but may be fewer turns if your hero is wounded. You have a limited
+number of rounds to reach and defeat the enemy castle.
+
+Most of what you do in the game you accomplish using your Ability Card,
+advancing your Ability marker and using up to 3 Abilities per turn. A
+typical turn includes using Abilities, Skills and Allies to help you move into
+a map hex and interact with a site it contains. Sites include monsters and
+mages you must fight, storms you must navigate, and towns or caravans
+you can interact with to do things like heal, recruit Allies and buy Crystals.
+
+Your chosen difficulty setting determines your round limit. Each round is
+either a day round or a night round. Each round is thematically half a day.
+
+You win if you reach and defeat the enemy castle before time runs out!
+
+Difficulty Settings
+Before setting up your game, choose which difficulty setting you want. It
+will affect your round limit and the type and number of enemies you face at
+the castle. For your first game, we recommend playing on the easy
+difficulty setting.
+
+        Casual
+          o Time Limit: 6 rounds
+          o Castle: 2 tower enemies
+        Easy
+          o Time Limit: 5 rounds
+          o Castle: 2 tower enemies and 1 wandering enemy
+        Normal
+          o Time Limit: 4 rounds
+          o Castle: 3 tower enemies
+        Hard
+          o Time Limit: 4 rounds
+          o Castle: 3 tower enemies and 1 wandering enemy
+        Expert
+          o Time Limit: 3 rounds
+          o Castle: 3 tower enemies
+        Impossible
+          o Time Limit: 3 rounds
+          o Castle: 4 tower enemies
+
+                                                                            5
+Setup
+Follow along with the graphic on page 8 to help as you set up the game.
+
+    1.   Randomly select a map card to be your
+         starting map and position it in front of
+         you with the side containing the castle
+         (see right) face down and the three partial
+         hexes closest to you. Position the other map
+         card (also castle side face down) so that the two
+         partial hexes on the starting map align with and
+         overlap the bottom two hexes on the second map
+         placed.
+
+         Bonus Map: After you have played the game a few
+         times, you may want to experience more variety and
+         broaden the landscape by using the Bonus Map.
+         See the Bonus Map variant on page 35 to learn how
+         this works.
+
+    2.   Select your hero. The red paladin      is on
+         one side of the hero token and the purple
+         paladin    on the other. In addition to your
+         hero token, collect the Ability Card and
+         Tracks Card, flipping each to the side with
+         your Paladin’s banner color. For your first
+         game, we recommend using the red paladin.
+
+    3.   Place your hero token on one of the three partial hexes closest to
+         you.
+
+    4.   Place your Ability Card to the right of the map. Place the largest
+         marker on the Ability square marked with a star     in the top-left
+         corner.
+
+    5.   Place the 3 Crystal Tracker Shards above your Ability Card and
+         set them each to 0. Place the Source Shard between your Ability
+         Card and the Map.
+
+    6.   Shuffle the enemy tokens and divide them into two stacks:
+         monsters       (red) and mages       (purple). Place these stacks
+         north of your map cards, leaving room for the Offer (see next step).
+
+
+6
+7.   Populate the map cards with wandering enemies
+     by placing a monster enemy on all map spaces
+     with red banners (left) and a mage enemy on all
+     map spaces with purple banners (right).
+
+8.   Create the Offer by flipping over the top token of the monster or
+     mage stack that currently has the most tokens (if tied, you may
+     choose). Do this three times to reveal 3 offer tokens.
+
+9.   Place your Tracks Card to the left of the map with markers on…
+         A. The 1 space of the turn limit track
+         B. The empty heart space (rightmost) of the wound track.
+              a) NOTE: For the wound track, use the marker that has
+                   a red side in addition to a black side.
+         C. The Level 1 space (leftmost) on the Level track
+         D. On the leftmost space of the Round track
+
+
+
+
+10. Look at the benefit icon on the Level 1 space of your Level track.
+    If the benefit is an Ally slot , you start the game with room to
+    recruit 1 Ally during your travels (see Allies on page 17). If it is a
+    Skill       , immediately choose a Skill to gain from the Offer,
+    replacing the empty Offer space after doing so. Place the Skill
+    below your Tracks Card, in the Skills area (TIP: you can position
+    this so just the Skill area of the token is showing -- see below).
+11.
+
+
+
+
+                                                                        7
+See completed set up below. Note that this is setup for the red paladin,
+which means you’ll see the red banners on the Tracks and Ability cards, the
+red paladin’s hero token, and a starting skill tucked below the Tracks Card.
+
+
+
+
+How to Win: Defeat the Castle
+To win Pocket Paladin, you must reach the enemy castle and defeat its
+defenders before time runs out. Thus, you will always want to be conscious
+of moving Northward on your adventures. You need to level up your hero
+throughout your journey to stand a chance against the powerful enemies
+defending the castle. A winning strategy balances haste (so you don’t run
+out of time) and interacting with map sites (so you can earn XP to level
+up).
+
+
+
+8
+Important Concepts
+A few concepts will be helpful to understand before learning the rest of
+game.
+
+
+Rounds, Turns, Actions, Abilities & Points
+Each of these concepts will be explained in more detail later, but for now
+it’s important to have an introduction to how they relate to each other.
+
+Pocket Paladin is played over multiple Rounds, with a different Round
+limit depending on your chosen difficulty setting. Each Round is made up
+of multiple Turns (a maximum of 6, but sometimes less depending on how
+many wounds you have). During each Turn, you will take Actions
+(movement, combat, etc.). And finally, every Action you take will be
+powered by Abilities (typically 1 to 3 Abilities per Action) or, sometimes,
+Skills or Allies. Abilities are on the squares connected by arrows on your
+Ability Card. Abilities generate Points, which dictate the effectiveness of
+your Actions. You are only allowed to use a maximum of 3 Abilities per
+Turn, but you can combine multiple Abilities of the same type to generate
+more Points.
+
+Note that Abilities are not the only thing that can power your Actions.
+Allies and Skills may also contribute.
+
+
+Crystals and the Source
+Crystals are resources you can spend to use more powerful actions. There
+are 3 crystal colors, shown below: Black (clubs icon, left), Blue (spades
+icon, middle), and Purple (diamonds icon, right).
+
+
+
+
+You track how many Crystals you have on the Crystal Tracking Shards,
+shown below.
+
+
+
+
+                                                                         9
+You start the game with 0 Crystals. When you gain a Crystal, rotate the
+appropriate Shard to reflect the increase. When you spend a Crystal, rotate
+the appropriate Shard to reflect the decrease. There is no limit to how long
+you can keep Crystals. You may only ever have a maximum of 5 Crystals
+of each color.
+
+                          The Crystal Source Shard (known as simply
+                          the Source) provides a Crystal you can use for
+                          free once per turn. During setup -- and after
+                          turns you used the Source Crystal -- you “roll”
+                          the Source Shard to randomly decide which
+                          Crystal options will be in the Source next turn.
+                          “Roll” the Shard by shaking it up in your hands
+                          and casting it on the table, or by flipping it like a
+coin. Whichever edge of the shard is most oriented upright shows you
+which Crystal options are available to be used.
+
+Note that some orientations of the Source Shard have 2 Crystal types
+shown, separated by a “/”. This means you have your choice of the 2 to use
+on your turn.
+
+Do not automatically reroll the Source Shard if you didn’t use a Crystal
+from it on your turn. Don’t reroll the Source Shard until the Turn Cleanup
+Phase.
+
+It is recommended that when the Source Crystal is available, you place the
+Soure Shard on the left side of your Ability Card, as shown during setup.
+After using the Source Crystal, move the Shard to the right side of the
+Ability Card to remember this. When you reroll it for next turn, once again
+place it on the left side of the Ability Card.
+
+
+Choosing Random Tokens
+Sometimes the rules will ask you to choose a random enemy token of a
+given type (Monster/red or Mage/purple). To choose a random token, mix
+up the appropriate token stack and choose one without looking.
+
+Alternatively, I like to leave the tokens in their stacks and simply avoid
+looking at the top tokens in detail. Then, I just grab the top token of the
+appropriate stack when I need a random one. I find this easier than
+shuffling up the tokens every time.
+
+
+
+10
+Rounds
+You have a limited number of rounds (dictated by your difficulty setting) to
+reach and defeat the castle. Each Round is thematically half a 24-hour day,
+and every round is either a Day Round or a Night Round.
+
+A Round consists of multiple Turns. You keep taking Turns until the Round
+ends, after which you perform Round cleanup and start the next Round.
+
+Rounds have 2 stages:
+
+     1. Turns Stage, in which you take multiple turns.
+
+     2. Round Cleanup Stage, which prepares you for the next round.
+
+
+Turns Stage
+The Turns Stage of the Round consists of you taking multiple Turns until
+the Round ends and you perform cleanup during the Round Cleanup Stage.
+After that, a new Round begins and you repeat the process.
+
+Your Turn is made up of 2 phases. Complete both phases every turn, in this
+order:
+
+     1. Action Phase, in which you’ll use Abilities to perform Actions,
+     as well as activate Skills and Allies.
+
+     2. Turn Cleanup Phase, which prepares you for the next Turn.
+
+
+ACTION PHASE
+During the Action Phase, you can take any number of Actions that you
+can or want to. You take most Actions by using Abilities to generate some
+number of Points of one of the game’s Point types, and then spending
+those Points on the Action.
+
+First, we’ll explain how to generate Points. Then, we’ll go through the
+different Actions you can take on your Turn, most of which require you to
+spend some number of Points.
+
+
+                                                                         11
+GENERATING AND SPENDING POINTS
+There are 4 Point types (some have multiple subtypes). The Point types and
+subtypes are noted below.
+
+        Movement
+        Influence
+        Attack (4 subtypes)
+         o Physical Melee Attack
+         o Physical Ranged Attack
+         o Magic Melee Attack
+         o Magic Ranged Attack
+        Block (2 subtypes)
+         o   Physical Block
+         o   Magic Block
+
+Think of Points as temporary currency that you generate so you can
+immediately spend them on an Action. For example, you might generate 4
+movement Points so you can move into an enemy’s hex. Then you might
+generate 5 block Points to block the enemy’s attack, and then 4 attack
+Points to defeat the enemy.
+
+There is no physical means for tracking the Points you generate and spend.
+You don’t need to remember them for long. You only generate Points to
+complete the current Action, and any unspent Points are lost immediately
+after the Action is completed.
+
+How Long are Points Stored?
+The Points you generate are stored until…
+     You spend them.
+     You decide to generate a different Point type, or take an Action
+        that requires you to spend a different Point type.
+     Your turn ends.
+
+For example, let’s say you generate 6 movement Points. You spend 2 of
+these movement Points to move into a grassland hex, which means you
+have 4 remaining. Then you decide to interact with a town on that new hex,
+so you use an Ability to generate 2 influence Points. This causes your 4
+remaining movement Points to be lost.
+
+
+12
+If you had instead decided to skip interacting with the town and kept
+moving, you could have spent your remaining 4 movement Points to move
+into, say, an adjacent wasteland hex. That would have brought your
+remaining movement Points down to zero. You would need to generate
+more movement Points if you wanted to take another move Action.
+
+NOTE: As shorthand, this rulebook and reference material may simply
+refer to Points as the Point type. For example, instead of saying, “Spend 4
+movement Points” this rulebook may simply say, “Spend 4 movement”.
+
+Ways to Generate Points
+There are 3 ways to generate Points.
+
+    1.      Use an Ability (most common)
+    2.      Use an Ally
+    3.      Use a Skill
+
+You can use a combination of the above methods for Point generation for a
+single Action. For example, you could use an Ability to generate 2
+movement and use an Ally to generate 4 movement, and then spend that 6
+total movement on move Action.
+
+Likewise, you can use multiple of the same method to generate Points for a
+single Action. For example, you could use 2 consecutive Abilities to
+generate 2 and 4 movement, for a total of 6 movement. Or, you could use 2
+Allies to generate 2 and 3 attack, for a total of 5 attack.
+
+Abilities
+Abilities are the heart and soul of Pocket Paladin.
+Abilities are found in the Ability squares on your
+Ability Card. Most of what you do on your Turn
+will be deciding how to best use Abilities during
+your Turn to accomplish the Actions you want to
+take.
+
+Each Ability square has two Abilities on it: a top Ability and a bottom
+Ability. You can use the top Ability for free, or the bottom Ability for a
+cost. When you use an Ability, you get to use just one of the two options in
+the Ability square. The top-half Ability is the square’s basic Ability, and
+the bottom-half Ability is the square’s boosted Ability.
+
+
+
+                                                                         13
+Using Abilities
+You can use up to 3 Abilities per Turn. You are allowed to use as few as
+zero if desired.
+
+You use an Ability by advancing your Ability marker from its existing
+Ability square to a different Ability square connected by an arrow. The
+arrow must point from the marker’s current square to the destination square.
+The Ability square you moved the marker to is the one you get to use an
+Ability from.
+
+Each Ability square is connected to one (or more) other squares by colored
+arrows. You can only move to Ability squares via arrows that match the
+color of a hero Level you have already reached.
+
+Each hero Level on has a colored border; either yellow, white or green. As
+you increase your hero Level, you’ll move the Level marker rightward. As
+soon as you reach a white-bordered Level, you have unlocked access to the
+white arrows on the Ability Card. When you reach a green-bordered Level,
+you have unlocked access to green arrows on the Ability Card.
+
+As you can see from the image on the next page at the start of the game
+you only have access to Ability squares connected by yellow arrows (A).
+When you reach the third hero Level, you unlock the Ability squares
+connected by white arrows (B) in addition to the yellow ones you already
+had access to. When you reach the fifth hero Level, you unlock access to
+Ability Squares connected by green arrows (C) and can now use all Ability
+squares on the card.
+
+Note that this example is showing the red Paladin’s Tracks and Ability
+Cards, but the same principle applies to the purple Paladin’s cards. Just pay
+attention to which arrow colors you have unlocked to see which Ability
+squares you have access to.
+
+
+
+
+14
+When you use an Ability, whether the basic (top) half of the square, or its
+boosted (bottom) half, it means you have generated that many Points of the
+type indicated.
+
+For example, if you use an Ability that provides 2        , it means you have
+generated 2 movement Points.
+
+Each Ability square has a basic Ability (the top
+half) and a boosted Ability (the bottom half),
+separated by a colored divider. On the left side
+of the Ability square is the icon of one of the 3
+Crystals. The Ability square pictured on the
+right, for example, is boosted with a blue
+Crystal.
+
+You can use an Ability square’s basic Ability for free. You can use its more
+powerful boosted Ability by spending a Crystal of the appropriate color,
+either from the Source or by spending a stored Crystal from the matching
+Crystal Tracker Shard.
+
+Special Abilities
+Some Abilities have unique Ability effects. They are explained here.
+
+                    An Ability with a slash ( / ) between two icons means you
+                    must choose which of those options to use the Ability for.
+                    In the Ability shown on the left, you have the choice of
+                    whether to use this Ability for 4 Physical Block or 4
+                    Physical Melee Attack.
+
+                    If a red is Heart pictured instead of one of the 3 Crystal
+                    colors, it means you must take 1 wound to use the boosted
+                    Ability in this square.
+
+                    If the Precision icon is shown on an Ability, it means you
+                    can use this Ability to give your ranged attacks Precision
+                    this turn. Note that using this Ability does use up on of
+                    your 3 Ability uses for your turn. Note that in the Ability
+                    shown on the left, you can choose between generating 4
+                    Magic Melee Attack, or adding Precision to your ranged
+                    attacks.
+
+                     If the Crystallize icon (   ) is shown, it means you can
+                                                                            15
+use this Ability to store the denoted number of Crystals (1) from the Source.
+This uses up the Crystal from the Source this turn, but you reroll the Source
+Shard as normal so there is a Crystal in the Source next turn.
+
+Combining Abilities
+As you are generating Points to carry out an Action, you are allowed to
+combine consecutive Abilities you use towards the same Action. An
+Abilities are considered consecutive if they are connected directly by an
+arrow (with no abilities in between).
+
+For example, if you use an Ability that generates 2 movement Points and
+from there immediately use a different Ability that generates 4 movement
+Points, you can use that total of 6 movement Points toward the same
+Action.
+
+You are not allowed to combine non-consecutive Abilities toward the
+same Action. If in the above example you had used an Ability that
+generated influence Points in between the two movement-generating
+Abilities, you could not use those two movement-generating Abilities
+toward the same Action.
+
+Note that you will learn there are different attack and block types (physical
+and magic), as well as different attack ranges (ranged and melee). You are
+allowed to combine consecutive attack abilities of any type. Likewise, you
+are allowed to combine consecutive block abilities of any type.
+
+For example, you could use an Ability that generates 2 physical block
+Points, and next use an Ability that generates 4 magic block Points. These
+could be considered consecutive abilities and combined for blocking a
+single enemy, even though they are different types of block.
+
+Standard Point Types
+Instead of using an Ability for its printed value, you can use it to generate 1
+Point of your choice of the 4 standard Point types.
+
+The standard Point types are:
+
+        Movement
+        Physical Block
+        Physical Melee Attack
+        Influence
+16
+Using an Ability for a standard 1 physical melee attack       or a standard
+physical block      can be combined for attacking and blocking respectively.
+It does not break the consecutive chain if you are trying to combine
+multiple Abilities together of the same type.
+
+Allies
+Allies are companions you can recruit to
+help you on your adventure. Allies exist on
+the opposite face of the Enemy Tokens, and
+on the top half of that face (the various
+Skills are on the bottom half). Allies have
+their image on the very top. Below their
+image is the Ally’s 3 stats. From left to right:
+Recruitment Cost (A), Effect (B), HP (C).
+
+The Recruitment Cost (A) is how much Influence you must spend to
+recruit the ally. You can recruit allies at specific Sites, namely Towns and
+Caravans. When you recruit an Ally, choose from among the Allies
+currently in the Offer (refill the Offer back up to 3 Allies after your turn in
+the same way you populated the Offer during setup). After recruiting an
+Ally, put it above your Tracks Card. You can optionally tuck the bottom
+part of the Ally token underneath your Tracks Card to cover everything
+except the Ally’s information. The Ally in the example image has a
+Recruitment Cost of 8 Influence.
+
+You can recruit as many Allies as you can afford, but you can only keep as
+many Allies as you have capacity for. Your Ally capacity is the sum of all
+Ally capacity icons (     ) present on your current Level and all Levels
+below it. You can choose to replace existing Allies with new Allies you
+recruit, even if the Ally you replace is exhausted or wounded (newly
+recruited Allies always join you ready (unexhausted) and unwounded).
+Replaced Allies are placed at the bottom of the appropriate Enemy stack.
+
+The Ally’s Effect (B) is what you can exhaust them to generate. At any
+time on your turn, you can exhaust an ally by moving them to the right side
+of your Tracks Card. (Note that exhausted Skills will also go to this area, so
+keep exhausted allies near the top half of the card and exhausted skills near
+the bottom half so you don’t confuse them). Exhausting an Ally in this way
+generates Points as shown by their Effect. Ally Effects are colored red or
+purple to help show whether it generates Physical (red) or Magic (purple)
+Points, but you can also see this simply from the Effect’s icon. The Ally in
+the example image has an Effect of generating 7 Physical Melee Attack.
+                                                                            17
+You cannot use an Exhausted Ally for its Effect again this round.
+Exhausted Allies are readied (unexhausted) during Round Cleanup, so you
+get to use them again next round. Even though you can’t use them for their
+Effects, exhausted Allies can still be wounded.
+
+The Ally’s HP (C) is how much Enemy damage they can soak when
+wounded (see Wounding Allies on page 28). The Ally in the example
+image has an HP of 6.
+
+Skills
+Skills are special abilities you earn when you
+reach certain hero Levels. Skills are found in
+the bottom section of the Ally/Skill tokens, on
+the opposite face of all Enemy tokens.
+
+When you increase your Level and see the skill
+capacity icon (       ), you immediately gain a
+Skill. (Note that the red Paladin begins the game with a Skill because her
+starting Level already has a skill capacity icon).
+
+When you gain a Skill, choose a skill token from the Offer and place it
+below your Tracks Card. You may optionally tuck the top part of the token
+underneath your Tracks Card to cover the Ally information.
+
+Each Skill has a different effect, represented with icons. You can see
+descriptions of each Skill’s effect on page 39, as well as on the reference
+cards provided with the game.
+
+Some Skills have passive effects that give you a benefit that is always in
+play.
+
+Some Skills require you to exhaust them to be used (shown with          ). To
+use a Skill with an exhaust cost, the Skill must be ready, which means it is
+below your Tracks Card. You exhaust a Skill by moving it to the right side
+of your Tracks Card, keeping it closer to the bottom half of the card so you
+don’t confuse the token with exhausted Allies. Exhausted Skills cannot be
+used again, but you ready all exhausted Skills during Round Cleanup, so
+you’ll get to use them again next round.
+
+Some Skills require you to spend an Ability to use (shown with             ).
+Using one of these Skills requires you to give up one of the 3 Abilities for
+your turn. In other words, if you use one of these Skills on your turn, you
+18
+can only use 2 Abilities instead of your normal 3 this turn. You must have
+one of your Abilities remaining in order to use one of these skills (you can’t
+use one if you’ve already used your 3 Abilities this turn). You do not need
+to exhaust Skills with this type of cost.
+
+Some Skills are free to use, but can only be used once per turn (shown with
+  ). You do not need to exhaust these Skills to use them.
+
+
+TAKING ACTIONS
+On your Turn, you can take as many Actions as you can or want to. There
+are many different Actions you can take, but most of the time you will be
+either moving or interacting with a map site.
+
+You take most Actions by generating and spending Points. Remember that
+you can generate Points with a combination of using Abilities, Skills and
+Allies (and remember you can use a maximum of 3 Abilities per turn!).
+
+Below are the different Actions you can take and how to resolve them.
+
+
+Move
+Move Actions are how your hero gets from one place to another. To take a
+move Action, carry out the following steps:
+
+    1.   Generate movement Points.
+
+    2.   Spend those movement Points to move your hero token into an
+         adjacent hex, reducing your stored movement Points by the
+         movement cost of the hex you entered. The cost to move into a
+         hex is based on terrain type. Terrain types are explained in the
+         next section.
+
+    3.   Continue moving until you choose to stop or cannot move any
+         further, or until you move into a hex with a required site.
+         Optional sites do not force you to stop movement or interact with
+         the site. The different sites and whether they are optional or
+         required are listed beginning on page 21.
+
+Exploring
+When you have reached one of the Northern-most full hexes on the
+Northern-most map card, your hero will be adjacent to one of the half
+                                                                           19
+hexes along the card’s Northern border. Before moving any further, you
+must Explore.
+
+To Explore, you must spend 2 Movement while your hero token is in one
+of the last full hexes along the Northern border of the second map card.
+After spending this Movement, flip over the first map card (bottom-most
+map card) and place it North of the map card your hero is currently on. The
+card you flipped is now showing one of the two Castles. Tuck this card
+underneath the previous map card so the partial hexes on the previous map
+card line up and connect with the card you just placed.
+If there are any tokens on the map card you need to flip and reposition,
+discard these tokens to the bottom of their respective Enemy stacks.
+
+After placing the Castle map card, populate the card with any Wandering
+Monster or Mage tokens as needed.
+
+If after spending the 2 Movement to Explore you have any Movement
+Points still stored, you may now spend these to continue moving if desired.
+
+Terrain Types
+There are 7 types of terrain, each with different costs to move into. These
+are shown below. You will notice that some terrain types have different
+movement costs depending on whether it is a day or night Round. Some
+terrain types you cannot move into, unless you have an effect that breaks
+this rule (such as some Skills). The terrain movement costs are also shown
+on one of the reference cards for convenience.
+
+
+          Grassland: 2 movement cost
+
+
+
+          Hills: 3 movement cost
+
+
+
+          Forest: 3 movement cost during the day. 5 movement cost at
+          night.
+
+
+          Desert: 3 movement cost at night. 5 movement cost during the
+          day.
+
+
+20
+           Wasteland: 4 movement cost
+
+
+
+           Mountains: You may not move into mountains.
+
+
+
+           Lake: You may not move into lakes.
+
+
+
+Discovering Tower Enemies
+Unlike Wandering Enemies, Tower Enemy tokens are not placed on the
+map automatically during setup or when a new map card with Tower
+Enemy sites is revealed. Instead, you reveal them as you get close to them--
+but depending on whether it is a Day or Night.
+
+If it is a Day Round, place the appropriate type of enemy token as soon as
+you move into a hex adjacent to a hex with a Monster or Mage Tower.
+
+If it is a Night Round, you only reveal Tower Enemies after you move in to
+the Tower’s hex. You therefore must immediately enter combat with the
+token after revealing it.
+
+Regardless if it is a Day or Night round, always reveal all enemies at the
+Castle when you move into a hex adjacent to the Castle.
+
+
+Interact with a Site
+Many map hexes contain a site. Sites are map features you can interact
+with using an Action. If the site is required, you must stop movement and
+immediately interact with it when you move into its hex. If a site is
+optional, you do not have to stop on its hex if you don’t want to, and you
+are not forced to interact with it even if you do.
+
+The different sites and how to interact with them are shown next.
+
+
+             Wandering Monster - Required
+             Enter combat with the monster enemy on the hex. Use the
+             monster’s printed values. Combat is explained on page 24.
+                                                                         21
+         Note that unlike fortified sites, you must place a random monster
+         token on all wandering monster sites when the map card is
+         revealed (even during setup).
+
+
+            Wandering Mage - Required
+            Enter combat with the monster enemy on the hex. Use the
+            mage’s printed values. Combat is explained on page 24. Note
+            that unlike fortified sites, you must place a random mage token
+            on all wandering monster sites when the map card is revealed
+            (even during setup).
+
+
+                 Crystal Garden - Optional
+                 If you end your Turn on a Crystal Garden, gain 1 Crystal of
+                 your choice during Turn cleanup.
+
+
+              Healing Garden - Optional
+              If you end your Turn on a healing garden, heal 1.
+
+
+                  Town - Optional
+                  At a town, you may spend influence Points (        ) for any
+                  combination of 3 different purposes:
+
+                        Recruit Allies: You may recruit an Ally from the
+                   offer by spending the required amount of influence per
+                   the Ally’s printed cost. Tuck the Ally underneath the top
+                   edge of your Tracks Card. The Ally is immediately
+                   available to be used. You may recruit multiple Allies if
+                   you have capacity for them.
+                  You must have capacity for the ally to recruit it. Your ally
+                   capacity is noted by your character’s Level. You have
+                   capacity for 1 ally for every ally icon (        ) on your
+                   current level and all levels below it.
+                  You may optionally disband an ally to free up capacity
+                   for recruiting a different one. To disband an ally, discard
+                   it from your hero area, to the bottom of the appropriate
+                   monster token stack.
+
+        Heal: For every 2 Points of influence spent, you may heal 1.
+
+
+22
+       Purchase Crystals: For every 2 Points of influence spent, you
+        receive 1 Crystal of your choice.
+
+
+                Caravan - Optional
+                At a caravan, you may spend influence ICON for any
+                combination of 2 different purposes:
+
+       Recruit Allies: You may recruit an Ally from the Offering by
+        spending the required amount of influence per the Ally’s printed
+        influence cost plus 1. Tuck the Ally underneath the top edge of
+        your Tracks Card. The Ally is immediately available to be used.
+        You may recruit multiple Allies if you have capacity for them.
+
+       Purchase Crystals: For every Point of XP spent, you receive 1
+        Crystal of your choice (max of 3).
+
+
+                 Storm – Required
+                 When in a hex with a storm, you must spend 2 movement
+                 (in addition to the movement needed for your destination
+                 hex) before you can leave the hex. Spending this 2
+movement is known as escaping the storm. Once you escape from a storm,
+you do not have to escape it again--unless you move out of and back into
+the storm’s hex again.
+
+After escaping a storm, you may spend extra movement for XP, but only if
+you then have enough to immediately level up. Earn n-1 XP, where n is the
+extra movement spent.
+
+
+                Monster (left) or Mage (right) Tower – Required
+                If at any point you are adjacent to a tower during the day,
+                place the top enemy from the matching stack into the
+                tower. If you enter a Tower space at night, and there isn’t
+already an enemy that was populated during the day, draw the top enemy
+(based on the Tower type) and begin combat.
+
+Tower enemies have double the token’s printed HP and double the token’s
+printed Attack, and are fortified. When defeated, the Tower enemy
+provides the higher (upside down) XP reward.
+
+
+
+                                                                        23
+                           Monster (left) or Mage (right) Castle –
+                           Required
+
+                           Face enemies based on your difficulty setting
+(see page 5). You may face some combination of Wandering enemies and
+Tower enemies. Remember: Tower enemies are fortified, have double
+attack and health, and provide the larger XP value) and Wandering enemies
+are not.
+
+
+               Tunnel – Optional
+               Pictured on the left are Tunnel Gates. They allow you to
+               travel underneath a hex (essentially skipping the hex) using
+               a tunnel. You may move from a hex with a Tunnel Gate to
+another hex with a Tunnel Gate, traveling underneath a maximum of 1 hex.
+In other words, you can’t use the tunnel to jump across the map to an
+unconnected Tunnel Gate. Tunnels always only allow you to skip 1 single
+hex.
+
+To travel through a tunnel, spend X movement, where X is the movement
+cost of the hex moved into at the other end of the tunnel (not the hex you
+skipped over).
+
+After doing this, immediately roll the Crystal Source Shard to determine
+what you encounter in the tunnel. If you roll a “ / “ use the shard on the
+left. After seeing your result, return the Crystal Source Shard back to the
+state it was in before rolling it.
+
+        Purple: Mage Tower Enemy
+        Blue: Monster Tower Enemy
+        Black: Peaceful, albeit creepy, darkness. You encounter no trouble.
+
+If you defeat the enemy (or rolled a Black Crystal) proceed to the exit hex.
+If you did not defeat the enemy, either retreat to the entrance hex OR
+choose to progress to the tunnel exit. If you choose to progress, the enemy
+attacks you again: you must take additional wounds based on the enemy’s
+attack value (ignoring enemy Abilities). These wounds are in addition to
+any you suffered during the combat. You cannot block this extra attack; you
+must take the wounds if you choose to progress.
+
+
+Combat
+Throughout your adventures you will encounter various enemies. If you
+move into a hex containing an enemy, you must enter combat with it.
+24
+Enemy Token Anatomy
+
+
+
+
+A) Attack stat
+
+B) Ability icon(s)
+
+C) Monster (         , red) or Mage (     , purple) icon
+
+D) XP reward. The right-side-up value (3 in this case) is if you defeat this
+token as a Wandering enemy. The upside-down value (5 in this case) is for
+if you defeat this enemy as a Tower enemy.
+
+E) HP stat
+
+F) Resistance icons (          ,        ), if any (this enemy does not have
+Resistance).
+
+
+Wandering vs. Tower Enemies
+Wandering and Tower Enemies use the same enemy tokens, but you make
+some modifications to their stats and XP rewards depending on which type
+the token is.
+
+Enemy tokens on Wandering Monster or Mage sites are always Wandering
+Enemies. Wandering Enemies simply use their printed stats; you need not
+                                                                         25
+make any modifications to their stats while in combat with them. If you
+defeat a Wandering Enemy, you gain its right-side-up XP reward.
+
+Enemy tokens on Monster or Mage Tower sites are always Tower Enemies.
+Tower Enemies are more challenging than Wandering Enemies. These are
+the differences:
+
+    Tower Enemies have double their printed HP and attack stats.
+    Tower Enemies are always Fortified (see page 38).
+      If a Tower Enemy has the printed Fortified Ability, it is
+          considered Double Fortified. You are not allowed to defeat it in
+          the Ranged Phase, even if your Ranged attacks have Precision
+          (see pages 15 and 38).
+    When defeated, Tower Enemies provide the token’s upside-down XP
+     reward value.
+
+Depending on your difficulty setting, you will face some number of
+Wandering or Tower enemies at the Castle--or even some of each. Follow
+the instructions on your difficulty setting when this time comes.
+
+Combat Phases
+Combat has 4 phases. Resolve them in order:
+
+1. Ranged Attack Phase
+2. Block Phase
+3. Melee Attack Phase
+4. Resolution Phase
+
+1. Ranged Phase
+
+In the Ranged Phase, you can use Ranged Attacks (     and     generated
+from Abilities, Skills, and/or Allies), which gives you the potential to
+defeat the enemy before they have a chance to attack.
+
+If the enemy has Physical Resistance (         ), you must halve the Physical
+attack Points (     ) you use against it. If the enemy has Magic Resistance
+(     ), you must halve the Magic attack Points (      ) you use against it.
+
+If you can generate enough ranged attack equal to or greater than the
+enemy’s HP, you defeat it. Proceed directly to the Resolution Phase.
+
+If you did not defeat the enemy in the Ranged Phase, proceed to the Block
+Phase.
+26
+2. Block Phase
+The enemy will now attack you using its attack stat. You must either block
+the attack or take wounds.
+
+If you spend Block Points equal to or greater than the enemy’s attack value,
+you have successfully blocked the attack. Proceed to the Melee Attack
+Phase. You are not required to spend any Block Points in this phase; you
+can choose to simply let the attack through and take wounds if you want to.
+
+Important: Blocking is all or nothing. You must block the full amount of
+the enemy’s attack for the block to be successful. If you are short even 1
+Point, the block is unsuccessful and the enemy’s full attack gets through.
+
+If the block was unsuccessful, you must take wounds.
+
+TAKING WOUNDS
+To take wounds, first determine how many you must
+take by comparing your Armor stat with the enemy’s
+Attack stat. Your current Armor stat is found by looking
+at your current hero Level, on the top-right corner of the
+Level box. In the image on the right: if this was your
+current hero Level, you can see you have an Armor stat
+of 3.
+
+Divide the enemy’s Attack stat by your Armor value to find the number of
+wounds you receive. If there is any remainder, round up to the next whole
+number.
+
+For example, if the enemy’s Attack is 7 and your Armor is 3, you’d
+calculate it as: 7 divided by 3 equals 2.33. You round up to the nearest
+whole number to land at 3. Therefore, you must take 3 wounds.
+
+For every wound you must take, shift the wound
+marker on your Wound Track leftward 1 space.
+The example on the right shows what it would
+look like to take 3 wounds if you had been at full
+health, with the wound marker starting in the
+rightmost space on the Wound Track.
+
+If you take a Wound that pushes the Wound marker onto or past the Turn
+space your Turn Marker is on, it means this is your last Turn of the Round
+(see page 31).
+
+                                                                         27
+If you take enough Wounds to push the Wound marker past the Turn space
+your Turn marker is on, you must take additional Wounds! For every Turn
+space your Wound marker has moved beyond where your Turn marker
+currently is, you must take 1 additional Wound (after taking all your
+normal Wounds). This rule is typically most relevant during Castle combat
+(see page 33), in which you are facing multiple enemies and have the
+potential to take a large number of wounds.
+
+If your Wound marker ever moves into the leftmost space of the Wound
+track, you lose the game immediately.
+
+Wounding Allies: You can wound ready or exhausted Allies to soak up
+some of the enemy damage for you. If you fail to block an enemy’s attack,
+you may move one or more Allies to the left side of your Tracks Card (the
+Wounded area) to wound them. Then, reduce the enemy’s attack by the
+HP(s) of the Ally(s) you wounded. Your hero then takes wounds based on
+whatever attack was not soaked up by wounding the Ally(s).
+
+HEALING WOUNDS
+Some effects in the game provide Healing, such as ending your turn on a
+Healing Garden or using certain Skills. Healing is how you get rid of
+Wounds. For every Point of Healing you spend, move the Wound marker
+rightward one space.
+
+You may heal an ally by spending Healing Points equal to half their HP stat,
+rounded down.
+
+EFFICIENT AND INEFFICIENT BLOCKS
+All enemy attacks and blocks have a type: Physical or Magic. Monsters
+(    ) deal Physical ( ) attack, and Mages (  ) deal Magic (  ) attack.
+
+If a block type matches the attack type, then the block is considered to be
+Efficient. This means the block gets to block at a 1:1 ratio; that is, 1 Point
+of block gets to block 1 Point of enemy attack. Physical block (          ) is
+Efficient against Physical attack (   ), and Magic block (      ) is Efficient
+against Magic attack (    ).
+
+If the block type doesn’t match the enemy attack type, then it is Inefficient.
+It requires 2 Points of Inefficient block to block 1 Point of enemy attack.
+
+It’s possible you will spend different types of block (some Physical and
+some Magic) to block an enemy’s attack. This is allowed, but you still must
+abide the rules about Efficient and Inefficient blocks. Deal with the two
+types of block separately in terms of halving them for Inefficiency or not.
+28
+For example, let’s say you are facing a Mage enemy with 4 attack. Since it
+is a Mage enemy, it deals Magic attack. You use an Ability to generate 2
+Magic block, and then use another Ability to generate 4 Physical block.
+This is just enough for a successful Block. The 4 Physical block is
+Inefficient against the enemy’s Magic attack, so it requires 4 Points to
+block just 2 attack. The Inefficient Physical block (for a modified 2 block)
+and the Magic block (for 2 Efficient block) add up to the 4 block you
+needed for the attack.
+
+3. Melee Phase
+Whether you successfully blocked the enemy’s attack or not, you now
+move on to the Melee Phase. You must spend attack Points equal to or
+greater than the enemy’s HP to defeat it.
+
+In the Melee Phase, you are allowed to use Ranged attacks. You can even
+use a combination of Ranged attack Points and Melee attack Points.
+
+If the enemy has Physical Resistance (   ), you must halve the Physical
+attack Points (     ,     ) you use against it. If the enemy has Magic
+Resistance (    ), you must halve the Magic attack Points ( ,    ) you
+use against it.
+
+If you defeated the enemy, place its token to the right of your Abilities Card.
+This token is now saved as XP. If you defeated a Tower Enemy, rotate the
+token upside-down when saving it as XP to denote that you get the larger,
+upside-down XP reward. If you now have enough XP to level up, you may
+do so (see leveling up on page 29)
+
+If you could not spend enough attack to defeat the enemy, you have lost the
+combat. You must retreat, which means moving your hero token to the hex
+from which you moved into the enemy’s hex. The enemy token remains in
+its hex. If you fight it again, it starts with its full HP and stats as normal; it
+recovers completely between combats against it.
+
+
+Level Up
+Throughout your journey you will earn XP, typically by defeating enemy
+tokens. Enemy tokens you defeat are saved as XP by placing the token on
+the right side of your Tracks Card. You can spend XP the level up your
+hero. You can do this any time you are not in the middle of resolving a
+different action (such as a combat).
+
+
+                                                                               29
+Your hero Level is the space on the Level Track that your Level marker is
+currently on. Each Level square states the level number inside the green
+wreath icon in the middle of the square (     ). You start on Level 1 and
+could increase all the way up to Level 8.
+
+To level up, spend XP equal to the cost of the next hero Level to the right.
+The cost is in the gold XP icon on the top-left of every Level’s square. You
+cannot make change when spending XP to level up. Any XP token you
+spend is spent for its full XP reward; you can’t spend some and save the
+rest. If you spend more XP than is needed for leveling up, any excess XP is
+lost.
+
+In the example below, you can see moving from Level 1 to Level 2 costs 3
+XP. After paying the appropriate cost, move your hero marker to your new
+Level’s square. Going from Level 2 to Level 3 would cost you 5 XP.
+
+
+
+
+You may gain a number of benefits from increasing your hero Level:
+
+    Your Armor (         ) may increase. Note the Armor stats on the top-
+     right corner of each Level square.
+    If your new Level shows the + icon, it means you have 1 additional
+     Ally capacity. You do not gain Allies for free; you still must go recruit
+     them at a site that allows you to do so.
+    If your new Level shows the +      icon, gain a new skill immediately.
+     Choose a skill token from the offer to place below your Tracks Card.
+     Your new skill is immediately active and ready to be used. Refill the
+     offer after taking a skill.
+    You may unlock new Abilities with a new hero Level. Your Level
+     dictates which arrow colors you may follow on your Tracks Card (and,
+     therefore, which Abilities you have access to). The Level square’s
+     colored border tells you which arrow colors you have unlocked. You
+     begin with only yellow arrows (Levels 1-2), unlock white arrows at
+     Level 3 (Levels 3-4), and unlock green arrows at Level 5 (Levels 5-8).
+     You don’t lose access to arrow colors you previously had as you
+     unlock new arrow colors.
+30
+Advance
+You may use any number of your 3 Abilities on your turn to simply
+Advance your Ability marker to a new connected Ability square without
+resolving the Ability. This is typically sub-optimal because it wastes one of
+your 3 Ability uses, but sometimes you may find it necessary.
+
+Note that some skills may give you a free Advance of your ability marker.
+These do not count as one of your 3 Ability uses for your turn.
+
+
+Turn Cleanup Phase
+After you are done taking actions on your turn, follow the steps below for
+the Turn Cleanup Phase. You are free to end your turn voluntarily, even if
+you had more actions you could have taken.
+
+Turn Cleanup has 4 steps:
+
+1.   Reroll the Crystal Source shard if you used it, and put it on the left side
+     of the Ability Card so the Source is ready for next Turn. If you didn’t
+     use a Source Crystal this turn, leave the shard as it is.
+
+2.   If you ended your turn on a Healing Garden, you may heal 1 now. If
+     you ended your turn on a Crystal Garden, you may gain 1 Crystal of a
+     color of your choice now.
+
+3.   Move your Turn marker on the Turn Track one space to the right (see
+     image below).
+
+
+
+
+4.   Check for end of round. There are 2 conditions which may end the
+     round. If you meet either condition, proceed to the Round Cleanup
+     Stage. The two end-of-round conditions are:
+      a) Your Turn marker was on space 6 of the Turn Track this turn
+          (there is a maximum of 6 turns per round; there is no space 7 to
+          advance to).
+                                                                             31
+     b) The space you moved your Turn marker into on the Turn Track is
+        blocked by the Wound marker. The Wound marker blocks a Turn
+        space if it is far enough leftward on the Wound Track to be in the
+        leftmost Wound space above the Turn space you would advance
+        into. In the image above, you can see the hero has taken 5 wounds
+        because the Wound marker has moved 5 spaces to the left on the
+        Wound Track. The Wound marker is now in a position above the 4
+        space on the Turn Track (the rightmost space above the 4 in the
+        Turn Track, not the leftmost space above it). Since in this example
+        you are advancing the Turn marker from the Turn 1 space to the
+        Turn 2 space, this does not trigger end of round. Likewise, the
+        round would not end if you advanced the Turn marker from the 3
+        space to the 4 space, because there is still an empty Wound space
+        above the 4 space on the Turn Track. If you had just taken your 4th
+        turn, however, this would trigger end of round because the wound
+        marker is to the left of the 5 space on the Turn Track.
+
+You can think of Turns and Wounds as opposing tracks. Turns start from
+the left and Wounds start from the right. When these two tracks cross, that
+is what triggers end of round.
+
+Once end of round is triggered, move to the Round Cleanup Stage.
+
+
+Round Cleanup Stage
+Follow these steps during Round Cleanup:
+
+1. Advance the Round marker on the Round Track one space (shown
+below). Each round is half a day, and the numbers in the spaces of the
+Round Track indicate which day it is. Note that advancing the Round
+marker will move you from a Day Round (        ) to a Night Round (  ),
+or vice versa. If you advanced past your Round limit (based on your
+difficulty setting), the game ends and you lose!
+
+
+
+
+2. Reset the Turn Track by placing the Turn marker on the Turn 1 space.
+
+
+
+32
+3. Refresh the Crystal Source Shard by rolling it and placing it on the left
+side of your Ability Card. Do this whether the Source Crystal had been
+used this turn or not.
+
+4. Refresh the Offer. Flip existing Offer tokens to their enemy side and put
+them on the bottom of their appropriate enemy stacks. Then, populate the
+Offer with 3 new Ally/Skill tokens. Remember, for each Offer token you
+populate, take it from the enemy stack that appears to have more tokens in
+it (you can estimate this; the point is simply that you do not run out of one
+type of enemy or another).
+
+5. Finally, refresh all your exhausted Allies and Skills so they can be used
+again in the next round. Refreshing Skill tokens moves them below your
+Tracks Card, and refreshing Ally tokens moves them above your Tracks
+Card.
+
+After performing Round Cleanup, you are free to begin your first Turn of
+the next Round. Keep playing Rounds until…
+
+    You win by defeating all enemies at the Castle
+
+    You lose by running out of time or by taking the final (leftmost)
+     Wound on the Wound Track.
+
+
+Castle Combat (Multiple Enemies)
+When you move into a hex adjacent to the Castle, you reveal all enemy
+tokens at the Castle. The number of enemies you face -- and whether they
+are Wandering or Tower enemies or some combination of the two -- is
+determined by your difficulty setting.
+
+While in combat with multiple enemies, complete each combat stage
+(Ranged, Block, Melee) for all enemies before moving on to the next phase.
+
+By default, treat each enemy individually. You are not allowed to block or
+attack multiple enemies at once.
+
+Another way to explain it: For each phase of combat, you must generate
+Points to deal with 1 enemy, spend those points, and then move on to the
+next enemy. Points generated for one enemy cannot be applied to a
+different enemy, even if you have surplus Points remaining after dealing
+with a given enemy.
+
+                                                                          33
+The exception to this rule is you are allowed to group enemies when
+attacking them, whether in the Ranged Phase or Melee Phase. Grouping
+enemies for the Block Phase is not allowed; you must deal with each
+enemy’s attack separately.
+
+You can choose which and how many enemies to group. Not all enemies in
+the combat must be included in the group.
+
+When you group enemies, combine their HPs and deal with just the new
+sum total HP. Generate and spend attack Points for these multiple enemies
+as if this was now a single enemy’s HP you were dealing with.
+
+For example, if you group two enemies, one with 4 HP and the other with 5
+HP, it is now as if you are facing a single enemy’s HP of 9 HP. You must
+defeat this 9 HP in the normal all-or-nothing fashion to defeat the two
+grouped enemies.
+
+If any enemies in the group have Physical Resistance, all your Physical
+attacks against this group are halved.
+
+If any enemies in the group have Magic Resistance, all your Magic attacks
+against this group are halved.
+
+If any enemies in the group have the Fortified ability, you cannot attack
+this group during the Ranged Phase (remember, the Castle is already a
+Fortified site. An enemy at a Fortified site that also has the Fortified ability
+cannot be attacked during the Ranged Phase, not even using Precision).
+
+You will likely end up taking Wounds from some enemies and blocking
+others. You may also end up defeating some enemies and not defeating
+others. Save defeated enemy tokens for their XP reward as normal. You
+cannot level up during a combat, but you may level up after the combat if
+you have enough XP.
+
+If you defeat all enemies at the Castle, you win the game immediately!
+
+If you did not defeat all enemies at the Castle, you must end your turn and
+retreat to the hex from which you approached the Castle. If are not out of
+time, you can move back into the Castle hex next turn to take on the
+enemies you have not yet defeated.
+
+
+
+
+34
+Optional Variant: Bonus Map
+Experienced players may want to add
+more variety to their games using the
+optional Bonus Map. The Bonus Map
+is found on the inside of the Cover
+Mat component. You will need to
+unfold and flatten the Bonus Map so
+it can rest flat on the table.
+
+When playing with the Bonus Map,
+you will add it to the game during
+setup. There are two configurations
+for laying out the bonus map, which
+will be explained on page 37. You
+can choose which configuration you
+want to play with, in addition to
+which side of the main map you’ll
+place the Bonus Map.
+
+Playing with the Bonus Map opens new spaces to travel to on your journey.
+You may find this makes the game harder (possibly depending on which
+configuration you choose) because, depending on the route you take, you
+may have more ground to cover to reach the Castle.
+
+By default, playing with the Bonus Map is intended to be more difficult for
+that reason. In a standard game with the Bonus Map, do not increase your
+Round limit.
+
+You may, however, want to play with the Bonus Map Adjusted Game
+Length to create a more manageable challenge:
+         Face the number and type of enemies as your difficulty setting
+          dictates, but give yourself 1 additional Round in your Round
+          limit.
+
+Interacting with the Bonus Map
+The Bonus Map behaves just like the map cards you are used to in the
+normal game. You can move from hex to hex and interact with Sites like
+you normally would.
+
+                                                                        35
+The Bonus Map will be placed adjacent to the main map on either the left
+side or the right side. The outermost hexes on the main map and the Bonus
+Map are considered to be adjacent to each other. Let’s call these pairs of
+connecting hexes Bridges. The only way to get from the main map to the
+Bonus Map (and vice versa) is by crossing one of these Bridges.
+
+There will be empty black spaces between the main map and the Bonus
+Map. Let’s call these Pits. You cannot move into Pits, but you can utilize
+Tunnel Gates to move underneath Pits using the normal rules regarding
+Tunnels.
+
+One unique feature of the Bonus Map is a Monster Tower residing in a hex
+with Lake Terrain. The only way to enter this hex and interact with this
+Tower is if you have a Skill that allows you to move into Water spaces.
+
+Exploring and the Bonus Map
+Regardless of which configuration of the Bonus Map you chose to play
+with, the Bonus Map does not change positions during the game.
+
+You can explore
+to reveal a new
+Map Card while
+at the      same
+position as with
+the normal rules:
+on a Northern-
+most full hex on
+the second Map
+Card. You cannot
+explore       and
+reveal a Map
+Card in a different place, such as on the Northern edge of the Bonus Map.
+But you are allowed to explore a Map Card in its normal position, but from
+an adjacent hex on the Bonus Map.
+
+When you explore and reveal a new Map Card, place it as normal, tucking
+it underneath the existing Map Card. The newly-placed Map Card will have
+hexes adjacent to hexes on the Bonus Map, giving you new places to cross
+between the main map to the Bonus Map.
+
+
+
+36
+Bonus Map Configurations
+CONFIGURATION A:
+THE LOST REALM
+Star the game on one of
+the Southern-most hexes
+of the Bonus Map. You
+will need to cross into the
+Main Map at some point
+to be able to reach the
+Castle. You are not
+allowed to cross into one
+of the half hexes on the
+Southern border of the
+first map card. Otherwise,
+you may cross Bridging
+hexes as normal to go
+from the Bonus Map to
+the main map.
+
+CONFIGURATION B:
+THE SIDE QUEST
+For normal difficulty,
+give yourself +2 Rounds
+to complete the game
+(including the +1 Round
+for the Bonus Map
+Adjusted Game Length).
+Start in one of the
+Southern-most half hexes
+on the first Map Card.
+Position the Bonus Map
+as shown, choosing to
+either place it on the right
+or the left of the main map. You are allowed to enter the Mini Boss’s hex
+(marked with the “X”) for a Move cost of 2 if you discard a Skill. Face a
+tower enemy as normal at the Mini Boss’s hex. After defeating the Mini
+Boss, collect the XP and also keep it as an Ally (it does not count against
+your Ally limit). You can exhaust this Ally to use its Attack, and may
+Wound it to soak damage.
+                                                                        37
+Enemy Abilities
+       Aggressive: It requires double the block Points to block this
+       enemy’s attack value.
+
+       Deadly: If you do not block this enemy’s attack, flip your
+       Wound marker to the injured (red) side. While you are injured,
+       you must take 1 automatic wound during the Block Phase of
+       every combat until you heal the wound. This is in addition to
+       any other wounds you make receive during the combat. You
+       may heal the wound by spending 1 healing and flipping the
+       Wound marker back to its uninjured (black) side.
+
+       Fortified: You cannot attack this enemy during the Ranged
+       Phase unless your range attacks have Precision (         ). If the
+       enemy has the Fortified ability and is also on a Fortified Site
+        (Towers, Castle), the enemy is considered Double Fortified.
+        Double Fortified enemies cannot be attacked under any
+        circumstances in the Ranged Phase; not even if your ranged
+        attacks have Precision.
+
+       Unfortified: This enemy is not Fortified, even if in a Tower or
+       Castle, or grouped with a Fortified enemy.
+
+       Flying: This enemy cannot be attacked in the Ranged Phase
+       unless your ranged attack has Precision (    ). All non-ranged
+       attacks against this enemy in the Melee Phase are halved.
+
+       Poison: If you do not successfully block this enemy, it deals
+       twice its attack value.
+
+        Slow: You may spend movement Points as if they were block
+        Points to block this enemy. You may use a combination of
+        movement and block Points if desired.
+
+        Trap: If you do not successfully block this enemy,
+        immediately advance your Turn Marker one space. Take 1
+        wound for every space on the Turn Track this pushes you
+        past your limit.
+
+
+38
+Skills
+
+                Once a turn, gain 2 Physical or Magic block.
+
+
+
+Once a turn, change 1 block Ability or 1 Ally block effect from Physical to
+                          Magic, or vice versa.
+
+
+
+
+Exhaust this Skill to double the value of a block Ability or Ally block effect.
+
+
+
+
+Exhaust this Skill to make all your melee attacks ranged this turn (whether
+                            Magic or Physical).
+
+
+
+                         Exhaust this Skill to heal 2.
+
+
+
+              Exhaust this Skill to get 1 extra Action this turn.
+
+
+
+     Spend an Action to give all your range attacks Precision this turn.
+
+
+
+ Once a turn, advance your Ability marker 1 space without it counting as
+      one of your Ability uses (don’t resolve the Ability’s effect).
+
+
+
+
+You may move into Lake Terrain hexes for 2 movement Points. If you end
+              your turn on a Lake, gain 1 Blue Crystal.
+
+                                                                            39
+     Exhaust this Skill to give all your range attacks Precision this turn.
+
+
+
+ Exhaust this Skill to gain 1 of the shown Crystal Color (there is a version
+  of this Skill for each Crystal color). You may also advance your Ability
+ marker without it counting as one of your Ability uses (don’t resolve the
+                               Ability’s effect).
+
+
+
+
+You may move into Mountain Terrain hexes for 2 movement Points. If you
+         end your turn on a Mountain, gain 1 Black Crystal.
+
+
+
+               Once a turn, gain Physical Block 2 or Move 2.
+
+
+
+
+Exhaust this Skill to ignore 1 Ability on 1 enemy this turn. (Remember that
+                    Resistances are not enemy abilities).
+
+
+
+                                  Credits
+                                  Game Design: Joe Klipfel
+                                  Rulebook Editor: Dave Aimone
+                                  Published by Mythfield Games
+
+                                  Thank you to game-icons.net                 for
+                                  providing much of the iconography.
+
+                                  Thank you for the folks who created the
+                                  Mage Knight Board Game, including
+                                  designer Vlaada Chvatil and publisher
+                                  WizKids, which was the driving
+                                  inspiration behind Pocket Paladin.
+40
+
