@@ -3,6 +3,7 @@ import { Session, randomAnswer } from './engine/session.mjs';
 import { K } from './engine/game.mjs';
 import { mulberry32 } from './engine/util.mjs';
 import { TUTORIAL } from './tutorial.mjs';
+import { VERSION } from './version.mjs';
 import {
   ELEMENTS, EL_NAME, POINTS, POINT_NAME, ENEMIES, ENEMY_NAME, ABILITY_TEXT, RESIST_TEXT, TOKENS, SKILLS, PROFESSIONS, GOALS, SHADES, QUESTS,
   NEED_NAME, SOURCE_FACES, TILES, TERRAIN_NAME, SITE_NAME, LUMINARIES, CITY_SETTINGS, GOAL_STRENGTH, ROUNDS, ratingName, REFERENCE_CARDS,
@@ -321,7 +322,7 @@ function menuSheet() {
     <button class="btn" data-act="hero">Hero sheet</button><button class="btn" data-act="reference">Reference cards</button>
     <button class="btn" data-act="tutorial">Restart as guided tutorial</button>
     <button class="btn" data-act="rules">How to play</button>
-    <button class="btn danger" data-act="abandon">Abandon this game</button><button class="btn" data-act="close">Close</button></div></div>`;
+    <button class="btn danger" data-act="abandon">Abandon this game</button><button class="btn" data-act="close">Close</button></div><p class="credit">Version ${VERSION}</p></div>`;
   render();
 }
 function referenceSheet() {
@@ -346,7 +347,7 @@ function renderTitle() {
     <button class="btn ${save ? '' : 'primary'} big" data-act="setup">New game</button>
     <button class="btn big" data-act="tutorial">Guided tutorial</button>
     <button class="btn big" data-act="rules">How to play</button>
-    <p class="credit">Game design by Joe Klipfel, Mythfield Games. Unofficial digital version of the print-and-play playtest files (1.3).</p></div></div>`;
+    <p class="credit">Game design by Joe Klipfel, Mythfield Games. Unofficial digital version of the print-and-play playtest files (1.3).<br>Version ${VERSION}</p></div></div>`;
 }
 function renderSetup() {
   const c = state.config; const lum = LUMINARIES[c.luminary]; const shade = SHADES[c.shade];
@@ -488,14 +489,8 @@ if (q.has('tutorial')) {
   setTimeout(step, 0);
 } else { if (q.get('screen')) state.screen = q.get('screen'); render(); }
 if ('serviceWorker' in navigator && location.protocol === 'https:') {
-  navigator.serviceWorker.register('sw.js').then(() => navigator.serviceWorker.ready).then((reg) => {
-    const art = [
-      ...Object.keys(ENEMIES).flatMap((id) => [`img/enemy/${id}.webp`, `img/ally/${id}.webp`]), ...Object.keys(PROFESSIONS).flatMap((id) => [`img/ally/${id}.webp`, `img/goal/${id}.webp`]),
-      ...Object.keys(SHADES).flatMap((id) => [`img/shade/${id}a.webp`, `img/shade/${id}b.webp`]), ...Object.keys(QUESTS).flatMap((id) => [`img/quest/${id}e.webp`, `img/quest/${id}h.webp`]),
-      ...Object.keys(TILES).map((id) => `img/tile/${id}.webp`), 'img/tile/back-easy.webp', 'img/tile/back-hard.webp',
-      ...Object.keys(LUMINARIES).flatMap((id) => [`img/mat/${id}.webp`, `img/mat/${id}-portrait.webp`, `img/mat/${id}-tracks.webp`]),
-      ...ELEMENTS.map((el) => `img/el/${el}.webp`), 'img/el/source.webp', ...[...POINTS, 'prec', 'save'].map((t) => `img/el/${t}.png`), ...REFERENCE_CARDS.map((r) => `img/ref/${r}.webp`),
-    ];
-    reg.active && reg.active.postMessage({ precache: art });
-  }).catch(() => {});
+  // Show a new version as soon as it has taken over, instead of on the load after next.
+  const had = !!navigator.serviceWorker.controller; let reloaded = false;
+  navigator.serviceWorker.addEventListener('controllerchange', () => { if (had && !reloaded) { reloaded = true; location.reload(); } });
+  navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).then((r) => r.update()).catch(() => {});
 }

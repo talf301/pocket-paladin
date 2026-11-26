@@ -76,4 +76,6 @@ Rule sources in order of authority: the reference cards and printed components, 
 
 ## Publishing
 
-The site is the `public/` directory.
+The site is the `public/` directory. After any change under `public/`, run `python3 -I tools/build_sw.py public nightbreaker`: it rewrites `sw.js` and `version.mjs` with a version made from the files' contents, which is what makes an installed copy update. The version is shown on the title screen and in the menu.
+
+GitHub Pages on a free plan needs a public repository. To publish: `git subtree push --prefix public origin gh-pages`, then enable Pages on the `gh-pages` branch. Check a deploy by comparing the live cache name with the local one: `curl -s https://talf301.github.io/pocket-paladin/sw.js | sed -n 2p`.
