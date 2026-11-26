@@ -2,6 +2,7 @@
 import { Session, randomAnswer } from './engine/session.mjs';
 import { K } from './engine/game.mjs';
 import { mulberry32 } from './engine/util.mjs';
+import { TUTORIAL } from './tutorial.mjs';
 import {
   ELEMENTS, EL_NAME, POINTS, POINT_NAME, ENEMIES, ENEMY_NAME, ABILITY_TEXT, RESIST_TEXT, TOKENS, SKILLS, PROFESSIONS, GOALS, SHADES, QUESTS,
   NEED_NAME, SOURCE_FACES, TILES, TERRAIN_NAME, SITE_NAME, LUMINARIES, CITY_SETTINGS, GOAL_STRENGTH, ROUNDS, ratingName, REFERENCE_CARDS,
@@ -25,12 +26,28 @@ function loadSave() { try { return JSON.parse(localStorage.getItem(SAVE_KEY) || 
 function startSession(save) {
   state.result = null; state.info = null; state.centerKey = ''; state.panel = 'mat';
   state.session = new Session(save, {
-    onPrompt(prompt, game) { state.prompt = prompt; state.game = game; state.screen = 'game'; persist(); render(); },
+    onPrompt(prompt, game) {
+      state.rawPrompt = prompt; state.game = game; state.screen = 'game';
+      const step = tutStep();
+      state.prompt = step ? { ...prompt, options: prompt.options.map((o) => (o.id === step.pick ? o : { ...o, disabled: true })) } : prompt;
+      if (step && step.where === 'mat') state.panel = 'mat';
+      if (state.session.config.tutorial && !step && state.session.answers.length === TUTORIAL.steps.length) state.info = tutorialDone();
+      persist(); render();
+    },
     onLog(msg, cls) { if (cls === 'good' || cls === 'bad' || cls === 'big') toast(msg, cls); },
     onOver(result, game) { state.result = result; state.game = game; state.prompt = null; state.screen = 'game'; localStorage.removeItem(SAVE_KEY); render(); },
     onError(err) { console.error(err); toast(`Error: ${err.message}`, 'bad'); },
   });
   state.game = state.session.game;
+}
+/** The tutorial step for the decision being asked, or null. */
+function tutStep() { const s = state.session; return s && s.config.tutorial && !state.result ? TUTORIAL.steps[s.answers.length] || null : null; }
+function coach() {
+  const step = tutStep(); if (!step) return '';
+  return `<div class="coach"><div class="ctext">${step.say}</div><div class="cfoot"><span>Tutorial ${state.session.answers.length + 1} / ${TUTORIAL.steps.length}</span><button data-act="skiptut">Skip tutorial</button></div></div>`;
+}
+function tutorialDone() {
+  return `<div class="sheet-body rules"><h3>Tutorial complete</h3>${TUTORIAL.after.map((t) => `<p>${t}</p>`).join('')}<div class="olist"><button class="btn primary" data-act="close">Play on</button></div></div>`;
 }
 function persist() { try { localStorage.setItem(SAVE_KEY, JSON.stringify(state.session.toSave())); } catch (e) { /* storage full or disabled */ } }
 function answer(id) { if (!state.session || !state.session.prompt) return; state.info = null; state.session.answer(id); }
@@ -129,7 +146,7 @@ function applyView(animate = false) {
 }
 function centerOnHero(animate = true) {
   const m = $('#map'); const g = state.game; if (!m || !g) return;
-  const r = m.getBoundingClientRect(); const pos = g.pos || { x: 2, r: 2.6 };
+  const r = m.getBoundingClientRect(); const pos = g.pos || { x: 2, r: 3.3 };
   state.view.x = r.width / 2 - pos.x * HW * state.view.z; state.view.y = r.height * 0.62 - pos.r * RH * state.view.z;
   applyView(animate);
 }
@@ -237,7 +254,7 @@ function renderPrompt() {
   const board = (o) => o.sq || o.hex || o.spot || o.ally !== undefined || o.skill !== undefined || o.offer !== undefined || o.enemy !== undefined || (o.enemies && o.enemies.length === 1);
   const list = p.options.filter((o) => !board(o));
   const hint = p.ctx === 'turn' ? (g.actionsLeft > 0 ? 'Tap a glowing ability, ally or hex.' : 'No abilities left this turn.') : '';
-  return `<footer class="prompt"><div class="ptitle"><b>${esc(p.title)}</b><span>${esc(hint)}</span></div><div class="pbtns">${list.map((o) => btn(o, o.id === 'end' || o.id === 'next' ? 'endbtn' : '')).join('')}</div></footer>`;
+  return `<footer class="prompt">${coach()}<div class="ptitle"><b>${esc(p.title)}</b><span>${esc(hint)}</span></div><div class="pbtns">${list.map((o) => btn(o, o.id === 'end' || o.id === 'next' ? 'endbtn' : '')).join('')}</div></footer>`;
 }
 
 // ================================================================ sheets
@@ -248,13 +265,13 @@ function sheetForPrompt() {
     const sq = g.lum.mat.squares[p.detail]; const W = 620, H = W * 882 / 1183;
     head = `<div class="sqcrop" style="background-image:url(img/mat/${g.lum.id}.webp);background-size:${W}px ${H}px;background-position:${-(sq.x * W - 48)}px ${-(sq.y * H - 48)}px"></div>`;
     const groups = [['basic', 'Basic'], ['boost', 'Boosted'], ['std', 'Instead']];
-    return `<div class="sheet-body ability">${head}<h3>${esc(p.title)}</h3>${groups.map(([k, name]) => { const os = p.options.filter((o) => o.kind === k); return os.length ? `<h5>${name}</h5><div class="olist ${k}">${os.map((o) => btn(o, k === 'boost' ? `cost-${o.cost}` : '')).join('')}</div>` : ''; }).join('')}<div class="olist">${btn(p.options.find((o) => o.id === 'cancel'))}</div></div>`;
+    return `<div class="sheet-body ability">${coach()}${head}<h3>${esc(p.title)}</h3>${groups.map(([k, name]) => { const os = p.options.filter((o) => o.kind === k); return os.length ? `<h5>${name}</h5><div class="olist ${k}">${os.map((o) => btn(o, k === 'boost' ? `cost-${o.cost}` : '')).join('')}</div>` : ''; }).join('')}<div class="olist">${btn(p.options.find((o) => o.id === 'cancel'))}</div></div>`;
   }
-  if (p.ctx === 'skill') head = `<div class="offer3">${p.options.map((o) => `<div class="pickcard" data-opt="${o.id}"><img src="img/ally/${g.offer[o.offer]}.webp"><b>${esc(o.label)}</b><small>${esc(o.text)}</small></div>`).join('')}</div>`;
-  if (p.ctx === 'goal') head = `<div class="offer3">${p.options.map((o) => `<div class="pickcard" data-opt="${o.id}"><img src="img/goal/${GOALS[o.goal].token}.webp"><b>${esc(o.label)}</b></div>`).join('')}</div>`;
+  if (p.ctx === 'skill') head = `<div class="offer3">${p.options.map((o) => `<div class="pickcard ${o.disabled ? 'dis' : ''}" ${o.disabled ? '' : `data-opt="${o.id}"`}><img src="img/ally/${g.offer[o.offer]}.webp"><b>${esc(o.label)}</b><small>${esc(o.text)}</small></div>`).join('')}</div>`;
+  if (p.ctx === 'goal') head = `<div class="offer3">${p.options.map((o) => `<div class="pickcard ${o.disabled ? 'dis' : ''}" ${o.disabled ? '' : `data-opt="${o.id}"`}><img src="img/goal/${GOALS[o.goal].token}.webp"><b>${esc(o.label)}</b></div>`).join('')}</div>`;
   if (p.ctx === 'shard') head = `<div class="offer3">${p.options.map((o) => `<div class="pickcard el ${o.disabled ? 'dis' : ''}" ${o.disabled ? '' : `data-opt="${o.id}"`}><img src="img/el/${o.el}.webp"><b>${esc(o.label)}</b></div>`).join('')}</div>`;
   const body = head || `<div class="olist">${p.options.map((o) => btn(o)).join('')}</div>`;
-  return `<div class="sheet-body"><h3>${esc(p.title)}</h3>${p.detail && p.ctx !== 'ability' ? `<p class="muted">${esc(p.detail)}</p>` : ''}${body}</div>`;
+  return `<div class="sheet-body">${coach()}<h3>${esc(p.title)}</h3>${p.detail && p.ctx !== 'ability' ? `<p class="muted">${esc(p.detail)}</p>` : ''}${body}</div>`;
 }
 function hexSheet(k) {
   const g = state.game, p = state.prompt; const hex = g.hexes.get(k); const os = p ? p.options.filter((o) => o.hex === k && !o.disabled) : [];
@@ -302,6 +319,7 @@ function heroSheet() {
 function menuSheet() {
   state.info = `<div class="sheet-body"><h3>Nightbreaker</h3><div class="olist">
     <button class="btn" data-act="hero">Hero sheet</button><button class="btn" data-act="reference">Reference cards</button>
+    <button class="btn" data-act="tutorial">Restart as guided tutorial</button>
     <button class="btn" data-act="rules">How to play</button>
     <button class="btn danger" data-act="abandon">Abandon this game</button><button class="btn" data-act="close">Close</button></div></div>`;
   render();
@@ -326,6 +344,7 @@ function renderTitle() {
     <div class="tbox"><h1>Nightbreaker</h1><p class="sub">A Pocket Paladin adventure</p>
     ${save ? '<button class="btn primary big" data-act="continue">Continue</button>' : ''}
     <button class="btn ${save ? '' : 'primary'} big" data-act="setup">New game</button>
+    <button class="btn big" data-act="tutorial">Guided tutorial</button>
     <button class="btn big" data-act="rules">How to play</button>
     <p class="credit">Game design by Joe Klipfel, Mythfield Games. Unofficial digital version of the print-and-play playtest files (1.3).</p></div></div>`;
 }
@@ -359,7 +378,8 @@ function renderOver() {
 function renderGame() {
   const g = state.game;
   const stage = g.cmb ? renderCombat() : renderMap();
-  return `<div class="game ${state.matOpen ? '' : 'matclosed'}">${renderTop()}<main class="stage">${stage}</main>${renderHud()}${renderParty()}${renderPanel()}${renderPrompt()}</div>`;
+  const step = tutStep();
+  return `<div class="game ${step ? `tutoring w-${step.where}` : ''}">${renderTop()}<main class="stage">${stage}</main>${renderHud()}${renderParty()}${renderPanel()}${renderPrompt()}</div>`;
 }
 function render() {
   const app = $('#app'); const sheet = $('#sheet');
@@ -369,7 +389,7 @@ function render() {
   else if (state.game && state.game.hexes) {
     app.innerHTML = renderGame();
     if ($('.pbody')) $('.pbody').scrollTop = pscroll;
-    const g = state.game; const key = `${g.pos ? K(g.pos.x, g.pos.r) : ''}|${g.tiles.length}|${!!g.cmb}`;
+    const g = state.game; const key = `${g.pos ? K(g.pos.x, g.pos.r) : ''}|${g.tiles.length}|${!!g.cmb}|${$('#map') ? Math.round($('#map').getBoundingClientRect().height) : 0}`;
     if ($('#map')) { if (key !== state.centerKey) { const first = !state.centerKey; state.centerKey = key; centerOnHero(!first); } else applyView(); }
   }
   const html = state.info || (state.screen === 'game' ? (state.result && !state.hideOver ? renderOver() : sheetForPrompt()) : null);
@@ -391,6 +411,8 @@ document.addEventListener('click', (e) => {
     case 'title': state.screen = 'title'; state.info = null; return render();
     case 'setup': state.screen = 'setup'; state.info = null; state.result = null; state.hideOver = false; return render();
     case 'begin': return newGame();
+    case 'tutorial': state.info = null; return startSession({ config: { ...TUTORIAL.config }, seed: TUTORIAL.seed, answers: [] });
+    case 'skiptut': state.session.config.tutorial = false; state.prompt = state.rawPrompt; persist(); toast('Tutorial off. The game is yours.'); return render();
     case 'continue': return startSession(loadSave());
     case 'close': state.info = null; return render();
     case 'tab': state.panel = arg; return render();
@@ -447,7 +469,10 @@ window.addEventListener('resize', () => { if (state.screen === 'game') { state.c
 
 // ================================================================ boot
 const q = new URLSearchParams(location.search);
-if (q.has('cfg')) { // development: ?cfg={...}&seed=1&auto=20&panel=company starts a game and plays `auto` random decisions
+if (q.has('tutorial')) {
+  startSession({ config: { ...TUTORIAL.config }, seed: TUTORIAL.seed, answers: TUTORIAL.steps.slice(0, +q.get('tutorial')).map((x) => x.pick) });
+  if (q.get('click')) setTimeout(() => { for (const sel of q.get('click').split(';')) { const el = document.querySelector(sel); if (el) el.click(); } }, 300);
+} else if (q.has('cfg')) { // development: ?cfg={...}&seed=1&auto=20&panel=company starts a game and plays `auto` random decisions
   const cfg = { ...state.config, ...JSON.parse(q.get('cfg')) }; const auto = +(q.get('auto') || 0); const rnd = mulberry32(+(q.get('botseed') || 7));
   if (q.has('panel')) state.panel = q.get('panel');
   startSession({ config: cfg, seed: +(q.get('seed') || 1), answers: [] });

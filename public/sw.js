@@ -1,6 +1,6 @@
 // Offline cache: the app shell is cached on install, art as it is first seen (and in the background on first run).
-const CACHE = 'nightbreaker-v1';
-const SHELL = ['./', 'index.html', 'style.css', 'app.mjs', 'data.mjs', 'manifest.webmanifest', 'icon-192.png', 'icon-180.png',
+const CACHE = 'nightbreaker-v2';
+const SHELL = ['./', 'index.html', 'style.css', 'app.mjs', 'data.mjs', 'tutorial.mjs', 'manifest.webmanifest', 'icon-192.png', 'icon-180.png',
   'engine/game.mjs', 'engine/session.mjs', 'engine/util.mjs'];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', (e) => { e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim())); });

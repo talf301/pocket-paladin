@@ -1,0 +1,40 @@
+// The guided tutorial: a fixed game (setup and seed) and a script of steps.
+// Step i belongs to decision i of the game: `say` is what the coach tells you and `pick` the one option you may take.
+// Because a game is fully determined by its setup, seed and answers, the same board appears every time.
+export const TUTORIAL = {
+  config: { luminary: 'courage', profession: null, profAs: 'ally', shade: 'S1', shadeSide: 'b', city: 'dusk2', extraGoals: 0, tutorial: true },
+  seed: 1345,
+  steps: [
+    { pick: 'start:0', where: 'map', say: 'Welcome, Courage. Somewhere to the north lies a city held by the Shade Greed. You have 4 rounds to reach it and defeat its defenders. First, step onto the map: tap the glowing <b>West</b> hex.' },
+    { pick: 'ab:H', where: 'mat', say: 'This is your ability mat. The gold cube is your ability marker. Each turn you may use up to <b>3 abilities</b> (the 3 dots). To use one, move the marker along an arrow to a new square. Tap the glowing square with the <b>2 boot</b>.' },
+    { pick: 'b0', where: 'sheet', say: 'Every square has a free <b>basic</b> effect on top and a stronger <b>boosted</b> effect below that costs a shard. Take the basic one: <b>2 move</b>.' },
+    { pick: 'ab:D', where: 'mat', say: 'You have 2 move points stored (shown above your tokens). The forest ahead costs 3 to enter, so you need more. Points of the same kind add up. Follow the arrow to the next <b>2 boot</b> square.' },
+    { pick: 'b0', where: 'sheet', say: 'Take <b>2 move</b> again.' },
+    { pick: 'move:1,3', where: 'map', say: 'Now you hold 4 move. Hexes you can afford glow with their cost. Tap the <b>forest</b> hex marked 3. Tap any other hex whenever you like to read about it.' },
+    { pick: 'ab:G', where: 'mat', say: 'You are next to two wandering enemies. They stay put until you attack or walk past them. One ability is left this turn: move the marker back to the <b>starred square</b>.' },
+    { pick: 'b0', where: 'sheet', say: 'Its basic effect gives 1 move and <b>saves the source shard</b>. The source (bottom right of the bar) offers one free shard each turn; saving puts it in your store for later. Take it.' },
+    { pick: 'end', where: 'bar', say: 'A fire shard is now in your store, and unused points are lost when the turn ends. All 3 abilities are spent. Tap <b>End turn</b>.' },
+    { pick: 'fight:3,3', where: 'map', say: 'Turn 2. The red banner is a wandering monster and you may attack it from here. Tap the <b>Iron Sentinel</b>, read its card, then choose to attack.' },
+    { pick: 'next', where: 'bar', say: 'Combat has 3 phases. In the <b>ranged phase</b> only ranged attacks count, and the Sentinel is <b>Fortified</b>, so it cannot be shot without precision. You have no ranged attack anyway. Tap <b>To the block phase</b>.' },
+    { pick: 'ab:D', where: 'mat', say: 'Now the Sentinel attacks for 2. Block all of it or take wounds: its attack divided by your armor (2), rounded up. A monster hits physically, so you want <b>physical block</b>. Move the marker to the upper square.' },
+    { pick: 'std:pb', where: 'sheet', say: 'This square has no block. Instead of its printed effect, any ability can give <b>1 standard point</b>: move, influence, physical block or physical melee. Take <b>1 physical block</b>.' },
+    { pick: 'ab:A', where: 'mat', say: 'Block 1 of 2. Blocking is all or nothing, so keep going: follow the arrow to the <b>shield and sword</b> square.' },
+    { pick: 'b0', where: 'sheet', say: 'A slash means you choose one. Take <b>2 physical block</b>.' },
+    { pick: 'block:0', where: 'combat', say: 'You hold 3 block against an attack of 2. Tap <b>Block</b>.' },
+    { pick: 'ab:G', where: 'mat', say: 'The <b>melee phase</b>: spend attack points equal to its HP (3) to defeat it. This is also all or nothing. Your last ability can reach the starred square, whose boosted effect is a strong melee attack.' },
+    { pick: 's0:stored', where: 'sheet', say: 'Pay with the fire shard you saved for the boosted effect: <b>4 physical melee</b>.' },
+    { pick: 'kill:0', where: 'combat', say: '4 attack against 3 HP. Tap <b>Defeat</b>.' },
+    { pick: 'level', where: 'bar', say: 'The Sentinel becomes an XP token worth 2. Level 2 costs 2 XP. Tap <b>Level up</b>.' },
+    { pick: 'xp:0', where: 'sheet', say: 'XP tokens are spent whole, with no change given. Select the <b>Iron Sentinel</b> token.' },
+    { pick: 'confirm', where: 'sheet', say: 'Confirm the level up.' },
+    { pick: 'offer:1', where: 'sheet', say: 'Level 2 raises your armor to 3 and grants a skill from the offer. Every token is an enemy on one side and an ally and a skill on the other. Take <b>Mend</b>: exhaust it once a round to heal 2.' },
+    { pick: 'end', where: 'bar', say: 'Well fought. Your abilities are spent, so <b>end the turn</b>.' },
+  ],
+  after: [
+    'You know the core of the game. From here you play freely.',
+    '<b>Head north.</b> Stand at the edge of your tile and spend 2 move to explore. The city is on one of the last two tiles.',
+    '<b>Grow.</b> Fight for XP, complete side quests for reputation and shards, recruit allies with influence at towns and caravans.',
+    '<b>Watch your wounds.</b> Every 2 wounds cost you a turn each round. The top bar shows the turns you have left.',
+    'The Company tab tracks your goal, the menu has the reference cards, and the undo arrow takes back a decision.',
+  ],
+};

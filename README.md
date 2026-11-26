@@ -12,6 +12,7 @@ The app is built from the playtest print-and-play files: the Pocket Paladin rule
 - Combat with ranged, block and melee phases, grouping, resistances, every enemy and Shade ability, intimidation, and wounds against the turn track.
 - Difficulty rating (Shade strength, city strength, extra goals) and the end-of-game score.
 - Saving after every decision, and undo back to the last point where hidden information was revealed.
+- A guided tutorial (title screen): a fixed first two turns as Courage that teach abilities, stored points, movement, saving the source shard, a full combat and levelling up, then hand over to free play.
 
 Not implemented: the Bonus Map and tunnels from the Pocket Paladin rulebook (the Nightbreaker tiles have neither), and Epic mode (removed in 1.3).
 
@@ -40,6 +41,7 @@ uv run --no-project --with pillow --with numpy python -I tools/extract.py PAGES 
 - `public/data.mjs` holds every component, transcribed by hand from the print-and-play sheets: enemy stats, ally and skill sides, Shades, side quests, the tiles' terrain and sites, and each luminary's ability squares, arrows and levels. `tools/hexcolors.py` checks the transcribed terrain against the tile art.
 - `public/engine/game.mjs` is the rules engine. It is straight-line async code: every player decision goes through `choose()`, and all randomness comes from a seeded generator. A game is fully determined by its setup, its seed and the list of answers. Saving stores that list; resuming and undo replay it.
 - `public/app.mjs` draws the table and answers the engine's prompts. Every prompt is a list of legal options; the interface shows them on the map, the ability mat, the tokens or as buttons, so an illegal move cannot be made.
+- `public/tutorial.mjs` is the tutorial: a setup, a seed and one step per decision (`say` is the coach's text, `pick` the only option left enabled). `tests/tutorial.test.mjs` replays it, so a rules or data change that breaks the script fails the tests. `?tutorial=N` opens it with the first N steps played.
 - `public/sw.js` caches the app and its art for offline play.
 
 ## Rulings

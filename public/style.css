@@ -174,3 +174,18 @@ button { font: inherit; color: inherit; }
 .foes.n1 .foe { display: grid; grid-template-columns: 112px 1fr; column-gap: 10px; align-items: center; justify-items: start; padding: 8px 10px; }
 .foes.n1 .ftop { grid-row: 1 / span 4; } .foes.n1 .chips { justify-content: flex-start; } .foes.n1 .fbtns { flex-direction: row; } .foes.n1 .fbtns .btn { flex: 1; min-height: 38px; }
 .foes.n3 .ftok, .foes.n2 .ftok { width: 66px; height: 66px; }
+
+/* taps: iOS Safari only delivers clicks on non-button elements that look clickable */
+[data-opt], [data-act], [data-set], [data-hex] { cursor: pointer; }
+.top, .hud, .party, .panel, .prompt { position: relative; z-index: 2; }
+
+/* tutorial coach */
+.coach { background: var(--parch); color: var(--ink); border-radius: 12px; padding: 8px 11px 5px; margin-bottom: 7px; box-shadow: 0 0 0 2px var(--gold), 0 4px 14px rgba(0,0,0,.6); font-size: 13.5px; line-height: 1.32; }
+.coach b { color: #7a3d06; }
+.cfoot { display: flex; justify-content: space-between; align-items: center; margin-top: 3px; font-size: 10.5px; color: #7b6a4c; }
+.cfoot button { background: none; border: 0; color: #7b6a4c; text-decoration: underline; font-size: 10.5px; padding: 4px 0 2px 12px; }
+.sheet-body .coach { margin-bottom: 12px; }
+.tutoring .pbody { max-height: 30vh; }
+.tutoring .party { min-height: 52px; padding-top: 3px; padding-bottom: 3px; }
+.tutoring.w-map .pbody { max-height: 15vh; }
+.tutoring.w-map .legend { display: none; }
