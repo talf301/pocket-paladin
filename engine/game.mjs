@@ -306,8 +306,8 @@ export class Game {
       this.allies.forEach((a, i) => { if (a.wounded && this.healCost(a) <= n) opts.push({ id: `ally:${i}`, ally: i, label: `Heal ${this.allyName(a)} (${this.healCost(a)})` }); });
       if (!opts.length) return;
       const pick = opts.length === 1 && opts[0].id !== 'injury' && !opts[0].id.startsWith('ally') ? opts[0]
-        : await this.choose(`Healing: ${n} point${n > 1 ? 's' : ''}`, [...opts, { id: 'cancel', label: 'Skip the rest' }], { ctx: 'heal' });
-      if (pick.id === 'cancel') return;
+        : await this.choose(`Healing: ${n} point${n > 1 ? 's' : ''}`, [...opts, { id: 'skip', label: 'Skip the rest' }], { ctx: 'heal' });
+      if (pick.id === 'skip') return;
       if (pick.id === 'wound') { this.wounds--; n--; this.log('Healed 1 wound.', 'good'); }
       else if (pick.id === 'injury') { this.injured = false; n--; this.log('Your injury is healed.', 'good'); }
       else { const a = this.allies[+pick.id.split(':')[1]]; a.wounded = false; n -= this.healCost(a); this.log(`${this.allyName(a)} is healed.`, 'good'); }
@@ -409,9 +409,9 @@ export class Game {
   async advanceFree(optional) {
     const arrows = this.reachable(); if (!arrows.length) return;
     const opts = arrows.map((a) => ({ id: `adv:${a.to}`, sq: a.to, label: `Advance to ${a.to}`, wound: a.wound }));
-    if (optional) opts.push({ id: 'cancel', label: 'Stay' });
+    if (optional) opts.push({ id: 'skip', label: 'Stay' });
     const pick = await this.choose('Advance your ability marker (free)', opts, { ctx: 'advance' });
-    if (pick.id === 'cancel') return;
+    if (pick.id === 'skip') return;
     await this.moveMarker(arrows.find((a) => a.to === pick.sq));
     this.log(`Ability marker advanced to ${pick.sq}.`);
   }

@@ -1,5 +1,5 @@
 // Nightbreaker touch interface. Draws the table from the engine's state and answers its prompts.
-import { Session, randomAnswer } from './engine/session.mjs';
+import { Session, randomAnswer, ENGINE_VERSION } from './engine/session.mjs';
 import { K } from './engine/game.mjs';
 import { mulberry32 } from './engine/util.mjs';
 import { TUTORIAL } from './tutorial.mjs';
@@ -23,7 +23,7 @@ const state = {
 try { Object.assign(state.config, JSON.parse(localStorage.getItem(CONFIG_KEY) || '{}')); } catch (e) { /* ignore */ }
 
 // ================================================================ session
-function loadSave() { try { return JSON.parse(localStorage.getItem(SAVE_KEY) || 'null'); } catch (e) { return null; } }
+function loadSave() { try { const s = JSON.parse(localStorage.getItem(SAVE_KEY) || 'null'); return s && s.v === ENGINE_VERSION ? s : null; } catch (e) { return null; } }
 function startSession(save) {
   state.result = null; state.info = null; state.centerKey = ''; state.panel = 'mat';
   state.session = new Session(save, {
@@ -37,7 +37,11 @@ function startSession(save) {
     },
     onLog(msg, cls) { if (cls === 'good' || cls === 'bad' || cls === 'big') toast(msg, cls); },
     onOver(result, game) { state.result = result; state.game = game; state.prompt = null; state.screen = 'game'; localStorage.removeItem(SAVE_KEY); render(); },
-    onError(err) { console.error(err); toast(`Error: ${err.message}`, 'bad'); },
+    onError(err) {
+      console.error(err);
+      if (!state.prompt) { localStorage.removeItem(SAVE_KEY); state.session = null; state.screen = 'title'; render(); toast('That saved game could not be loaded.', 'bad'); return; }
+      toast(`Error: ${err.message}`, 'bad');
+    },
   });
   state.game = state.session.game;
 }
@@ -51,7 +55,13 @@ function tutorialDone() {
   return `<div class="sheet-body rules"><h3>Tutorial complete</h3>${TUTORIAL.after.map((t) => `<p>${t}</p>`).join('')}<div class="olist"><button class="btn primary" data-act="close">Play on</button></div></div>`;
 }
 function persist() { try { localStorage.setItem(SAVE_KEY, JSON.stringify(state.session.toSave())); } catch (e) { /* storage full or disabled */ } }
-function answer(id) { if (!state.session || !state.session.prompt) return; state.info = null; state.session.answer(id); }
+function answer(id) {
+  const s = state.session; if (!s || !s.prompt) return;
+  state.info = null;
+  // Cancelling a pop-up takes back the tap that opened it instead of recording an empty step, so undo stays one tap per action.
+  if (id === 'cancel' && s.canBackOut()) { s.undo(); return; }
+  s.answer(id);
+}
 function newGame() {
   localStorage.setItem(CONFIG_KEY, JSON.stringify(state.config));
   startSession({ config: { ...state.config }, seed: (Math.random() * 2 ** 31) | 0, answers: [] });
@@ -259,6 +269,7 @@ function renderPrompt() {
 }
 
 // ================================================================ sheets
+const sheetUndo = () => (state.session && state.session.canUndo() ? '<button class="sheet-undo" data-act="undo">&#8630; Undo</button>' : '');
 function sheetForPrompt() {
   const p = state.prompt, g = state.game; if (!p || p.ctx === 'turn' || p.ctx === 'combat' || p.ctx === 'start') return null;
   let head = '';
@@ -266,13 +277,13 @@ function sheetForPrompt() {
     const sq = g.lum.mat.squares[p.detail]; const W = 620, H = W * 882 / 1183;
     head = `<div class="sqcrop" style="background-image:url(img/mat/${g.lum.id}.webp);background-size:${W}px ${H}px;background-position:${-(sq.x * W - 48)}px ${-(sq.y * H - 48)}px"></div>`;
     const groups = [['basic', 'Basic'], ['boost', 'Boosted'], ['std', 'Instead']];
-    return `<div class="sheet-body ability">${coach()}${head}<h3>${esc(p.title)}</h3>${groups.map(([k, name]) => { const os = p.options.filter((o) => o.kind === k); return os.length ? `<h5>${name}</h5><div class="olist ${k}">${os.map((o) => btn(o, k === 'boost' ? `cost-${o.cost}` : '')).join('')}</div>` : ''; }).join('')}<div class="olist">${btn(p.options.find((o) => o.id === 'cancel'))}</div></div>`;
+    return `<div class="sheet-body ability">${coach()}${head}${sheetUndo()}<h3>${esc(p.title)}</h3>${groups.map(([k, name]) => { const os = p.options.filter((o) => o.kind === k); return os.length ? `<h5>${name}</h5><div class="olist ${k}">${os.map((o) => btn(o, k === 'boost' ? `cost-${o.cost}` : '')).join('')}</div>` : ''; }).join('')}<div class="olist">${btn(p.options.find((o) => o.id === 'cancel'))}</div></div>`;
   }
   if (p.ctx === 'skill') head = `<div class="offer3">${p.options.map((o) => `<div class="pickcard ${o.disabled ? 'dis' : ''}" ${o.disabled ? '' : `data-opt="${o.id}"`}><img src="img/ally/${g.offer[o.offer]}.webp"><b>${esc(o.label)}</b><small>${esc(o.text)}</small></div>`).join('')}</div>`;
   if (p.ctx === 'goal') head = `<div class="offer3">${p.options.map((o) => `<div class="pickcard ${o.disabled ? 'dis' : ''}" ${o.disabled ? '' : `data-opt="${o.id}"`}><img src="img/goal/${GOALS[o.goal].token}.webp"><b>${esc(o.label)}</b></div>`).join('')}</div>`;
   if (p.ctx === 'shard') head = `<div class="offer3">${p.options.map((o) => `<div class="pickcard el ${o.disabled ? 'dis' : ''}" ${o.disabled ? '' : `data-opt="${o.id}"`}><img src="img/el/${o.el}.webp"><b>${esc(o.label)}</b></div>`).join('')}</div>`;
   const body = head || `<div class="olist">${p.options.map((o) => btn(o)).join('')}</div>`;
-  return `<div class="sheet-body">${coach()}<h3>${esc(p.title)}</h3>${p.detail && p.ctx !== 'ability' ? `<p class="muted">${esc(p.detail)}</p>` : ''}${body}</div>`;
+  return `<div class="sheet-body">${coach()}${sheetUndo()}<h3>${esc(p.title)}</h3>${p.detail && p.ctx !== 'ability' ? `<p class="muted">${esc(p.detail)}</p>` : ''}${body}</div>`;
 }
 function hexSheet(k) {
   const g = state.game, p = state.prompt; const hex = g.hexes.get(k); const os = p ? p.options.filter((o) => o.hex === k && !o.disabled) : [];
@@ -424,7 +435,7 @@ document.addEventListener('click', (e) => {
     case 'rules': state.info = `<div class="sheet-body rules">${RULES_HTML}<div class="olist"><button class="btn" data-act="close">Close</button></div></div>`; return render();
     case 'abandon': localStorage.removeItem(SAVE_KEY); state.session = null; state.screen = 'title'; state.info = null; return render();
     case 'hideover': state.hideOver = true; return render();
-    case 'undo': if (state.session.undo()) toast('Undone'); return;
+    case 'undo': state.info = null; if (state.session.undo()) toast('Undone'); else render(); return;
     case 'recenter': return centerOnHero(true);
     case 'source': state.info = `<div class="sheet-body"><h3>The source</h3><p>Once a turn you may pay for a boosted ability with a shard shown on the source instead of a stored one. ${g.source.used ? 'It is spent this turn and will be rolled again at the end of the turn.' : `It shows ${SOURCE_FACES[g.source.face].map((x) => EL_NAME[x]).join(' or ')}.`}</p><img class="srcimg" src="img/el/source.webp"><div class="olist"><button class="btn" data-act="close">Close</button></div></div>`; return render();
     case 'ally': { const a = g.allies[+arg]; state.info = `<div class="sheet-body">${tokenInfo(a.id, a.prof)}<p class="muted">${a.wounded ? 'Wounded: cannot be used or absorb damage until healed.' : a.exhausted ? 'Exhausted until the next round.' : 'Ready.'}</p><div class="olist"><button class="btn" data-act="close">Close</button></div></div>`; return render(); }
