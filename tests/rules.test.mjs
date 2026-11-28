@@ -251,3 +251,23 @@ test('feint lasts the turn; wayfarer lowers lake cost for a lakewalker', async (
   g.skills.push({ skill: 'lake', id: 'T1' }); g.wayfarer = { terrain: 'lake', mode: 'cost' };
   assert.equal(g.moveCost({ terrain: 'lake', site: null, quest: null }), 1);
 });
+
+test('undo steps back whole actions, through follow-up prompts, to the last reveal of hidden information', async () => {
+  const run = (answers) => new Promise((res, rej) => { const s = new Session({ config: { ...BASE }, seed: 3, answers }, { onPrompt: () => res(s), onOver: () => res(s), onError: rej }); });
+  const next = (s, id) => new Promise((res) => { s.hooks.onPrompt = () => res(s); s.answer(id); });
+  const back = (s) => new Promise((res) => { s.hooks.onPrompt = () => res(s); assert.ok(s.undo()); });
+  let s = await run([]);
+  assert.equal(s.canUndo(), false);
+  await next(s, 'start:2'); await next(s, 'ab:H'); assert.equal(s.prompt.ctx, 'ability');
+  await next(s, 'b0'); await next(s, 'ab:D'); await next(s, 'std:move'); assert.equal(s.game.pool.move, 3);
+  await back(s); assert.equal(s.prompt.ctx, 'turn'); assert.equal(s.game.pool.move, 2); assert.equal(s.game.marker, 'H'); // one action, not one prompt
+  await back(s); assert.equal(s.prompt.ctx, 'turn'); assert.equal(s.game.pool.move, 0); assert.equal(s.game.marker, 'G');
+  await back(s); assert.equal(s.prompt.ctx, 'start'); assert.equal(s.canUndo(), false);
+  // from inside a pop-up, undo returns to the turn prompt it came from
+  await next(s, 'start:2'); await next(s, 'ab:H'); assert.equal(s.prompt.ctx, 'ability');
+  await back(s); assert.equal(s.prompt.ctx, 'turn'); assert.equal(s.answers.length, 1);
+  await next(s, 'ab:H'); assert.ok(s.canBackOut()); await back(s); assert.equal(s.answers.length, 1, 'cancelling a pop-up leaves no trace');
+  // ending the turn rolls nothing new here unless the source was used; a reveal blocks undo past it
+  await next(s, 'ab:H'); const boost = s.prompt.options.find((o) => o.id.endsWith(':source'));
+  if (boost) { await next(s, boost.id); await next(s, 'end'); assert.equal(s.canUndo(), false, 'the source was rerolled'); }
+});

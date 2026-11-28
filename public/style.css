@@ -189,3 +189,5 @@ button { font: inherit; color: inherit; }
 .tutoring .party { min-height: 52px; padding-top: 3px; padding-bottom: 3px; }
 .tutoring.w-map .pbody { max-height: 15vh; }
 .tutoring.w-map .legend { display: none; }
+.sheet-undo { float: right; background: var(--bg2); border: 1px solid var(--line); border-radius: 9px; color: var(--gold2); padding: 6px 10px; font-size: 13px; font-weight: 600; margin: 0 0 6px 10px; }
+.sheet-body.ability .sheet-undo { float: none; display: block; margin: 0 0 8px 0; }
